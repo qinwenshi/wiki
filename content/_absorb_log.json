@@ -1,0 +1,37 @@
+{
+  "last_absorbed": "2026-04-05",
+  "total_entries_in_corpus": 15409,
+  "entries_sampled": 960,
+  "articles_created": [
+    "people/王兴.md",
+    "philosophies/产品思维.md",
+    "philosophies/哲学与认知.md",
+    "patterns/创业与商业.md",
+    "knowledge/历史与文明.md",
+    "knowledge/科技与互联网.md",
+    "knowledge/经济与投资.md",
+    "knowledge/语言与文化.md",
+    "life/生活与饮食.md",
+    "life/其他观察.md",
+    "people/时事与社会.md",
+    "reading/阅读与书单.md",
+    "eras/2007-2010早期探索.md",
+    "eras/2011-2015美团崛起.md",
+    "eras/2016-2020成熟期.md",
+    "_index.md"
+  ],
+  "categories": {
+    "其他观察": 80,
+    "生活与饮食": 80,
+    "科技与互联网": 80,
+    "历史与文明": 80,
+    "阅读与书单": 80,
+    "哲学与认知": 80,
+    "创业与商业": 80,
+    "时事与社会": 80,
+    "产品思维": 80,
+    "人物观察": 80,
+    "语言与文化": 80,
+    "经济与投资": 80
+  }
+}

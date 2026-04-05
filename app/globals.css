@@ -1,0 +1,159 @@
+/* Wikipedia Vector 2022 overrides */
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.wiki-clone-search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #a2a9b1;
+  border-top: none;
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.wiki-clone-search-dropdown a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #202122;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.wiki-clone-search-dropdown a:hover {
+  background: #f8f9fa;
+}
+
+.backlinks-panel {
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  padding: 12px 16px;
+  margin-top: 20px;
+  border-radius: 2px;
+}
+
+.backlinks-panel h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.backlinks-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.backlinks-list li { margin: 4px 0; }
+
+.backlinks-list a {
+  color: #3366cc;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.backlinks-list a:hover { text-decoration: underline; }
+
+/* Article content styles */
+.mw-parser-output { line-height: 1.6; }
+
+/* Fix images in article */
+.mw-parser-output img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* TOC styling */
+.wiki-toc {
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  padding: 12px 20px;
+  display: inline-block;
+  min-width: 200px;
+  margin-bottom: 16px;
+}
+
+.wiki-toc-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.wiki-toc ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.wiki-toc li { margin: 4px 0; }
+
+.wiki-toc a {
+  color: #3366cc;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.wiki-toc a:hover { text-decoration: underline; }
+
+/* Local wiki content styles */
+.wiki-content h1, .wiki-content h2, .wiki-content h3 {
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 4px;
+  margin-top: 24px;
+}
+.wiki-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+}
+.wiki-content table th, .wiki-content table td {
+  border: 1px solid #a2a9b1;
+  padding: 8px 12px;
+  text-align: left;
+}
+.wiki-content table th {
+  background: #eaecf0;
+}
+.wiki-content blockquote {
+  border-left: 4px solid #3366cc;
+  margin: 16px 0;
+  padding: 8px 16px;
+  background: #f8f9fa;
+  color: #202122;
+}
+.wiki-content img {
+  max-width: 100%;
+  height: auto;
+}
+.wiki-content a {
+  color: #3366cc;
+}
+.wiki-content code {
+  background: #f8f9fa;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-family: monospace;
+}
+.wiki-content pre {
+  background: #f8f9fa;
+  padding: 16px;
+  overflow-x: auto;
+  border: 1px solid #a2a9b1;
+  border-radius: 3px;
+}
+/* Mermaid diagram container */
+.mermaid {
+  text-align: center;
+  margin: 16px 0;
+  padding: 16px;
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
