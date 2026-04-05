@@ -13,31 +13,11 @@ interface WikiLayoutProps {
 
 const NAV = [
   {
-    label: '🧠 哲学思想',
+    label: '🏢 公司',
     items: [
-      { slug: '金字塔原理', label: '金字塔原理' },
-      { slug: '逻辑思维框架', label: '逻辑思维框架' },
-      { slug: '产品思维', label: '产品思维' },
-      { slug: '哲学与认知', label: '哲学与认知' },
-    ],
-  },
-  {
-    label: '⚙️ 技术方法',
-    items: [
-      { slug: '协同过滤算法', label: '协同过滤算法' },
-      { slug: '推荐系统工程实践', label: '推荐系统工程' },
-      { slug: '评分预测与模型融合', label: '评分预测与融合' },
-      { slug: '写作结构技术', label: '写作结构技术' },
-    ],
-  },
-  {
-    label: '📚 知识领域',
-    items: [
-      { slug: '推荐系统概论', label: '推荐系统概论' },
-      { slug: '历史与文明', label: '历史与文明' },
-      { slug: '科技与互联网', label: '科技与互联网' },
-      { slug: '经济与投资', label: '经济与投资' },
-      { slug: '语言与文化', label: '语言与文化' },
+      { slug: '美团', label: '美团' },
+      { slug: '字节跳动', label: '字节跳动' },
+      { slug: '步步高', label: '步步高' },
     ],
   },
   {
@@ -54,6 +34,47 @@ const NAV = [
     ],
   },
   {
+    label: '🧠 哲学思想',
+    items: [
+      { slug: '俞军产品方法论', label: '俞军产品方法论' },
+      { slug: '王慧文产品课', label: '王慧文产品课' },
+      { slug: '微信产品哲学', label: '微信产品哲学' },
+      { slug: '产品与算法思维', label: '产品与算法思维' },
+      { slug: '段永平投资哲学', label: '段永平投资哲学' },
+      { slug: '价值投资', label: '价值投资' },
+      { slug: '金字塔原理', label: '金字塔原理' },
+      { slug: '维特根斯坦哲学', label: '维特根斯坦哲学' },
+      { slug: '创业与商业', label: '创业与商业' },
+      { slug: '供需关系与产品设计', label: '供需关系' },
+      { slug: '用户价值模型', label: '用户价值模型' },
+      { slug: '逻辑思维框架', label: '逻辑思维框架' },
+      { slug: '产品思维', label: '产品思维' },
+    ],
+  },
+  {
+    label: '⚙️ 技术方法',
+    items: [
+      { slug: '协同过滤算法', label: '协同过滤算法' },
+      { slug: '推荐系统工程实践', label: '推荐系统工程' },
+      { slug: '评分预测与模型融合', label: '评分预测与融合' },
+      { slug: '高产出管理', label: '高产出管理' },
+      { slug: 'OKR', label: 'OKR' },
+      { slug: '写作结构技术', label: '写作结构技术' },
+    ],
+  },
+  {
+    label: '📚 知识领域',
+    items: [
+      { slug: '推荐系统概论', label: '推荐系统概论' },
+      { slug: '饭否文化与社区', label: '饭否文化与社区' },
+      { slug: '经济与投资', label: '经济与投资' },
+      { slug: '科技与互联网', label: '科技与互联网' },
+      { slug: '历史与文明', label: '历史与文明' },
+      { slug: '时事与社会', label: '时事与社会' },
+      { slug: '语言与文化', label: '语言与文化' },
+    ],
+  },
+  {
     label: '📅 年代',
     items: [
       { slug: '2007-2010早期探索', label: '2007–2010 早期' },
@@ -66,11 +87,6 @@ const NAV = [
     items: [
       { slug: '生活与饮食', label: '生活与饮食' },
       { slug: '其他观察', label: '其他观察' },
-    ],
-  },
-  {
-    label: '📖 阅读',
-    items: [
       { slug: '阅读与书单', label: '阅读与书单' },
     ],
   },
@@ -234,7 +250,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         color: '#a0aec0',
         textAlign: 'center',
       }}>
-        Leon 的个人知识库 · 40 篇文章 · 王兴 · 张一鸣 · 张小龙 · 王慧文 · 俞军 · 段永平 · 格鲁夫 · 维特根斯坦
+        Leon 的个人知识库 · 44 篇文章 · 8位人物 · 3家公司 · 13篇哲学思想
       </footer>
     </div>
   );
