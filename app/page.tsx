@@ -29,7 +29,7 @@ export default function HomePage() {
       <div style={{ textAlign: 'center', padding: '40px 0 32px' }}>
         <h1 style={{ fontSize: '2em', fontWeight: 'bold', marginBottom: 8 }}>📖 Leon 的个人知识库</h1>
         <p style={{ color: '#54595d', marginBottom: 24 }}>
-          基于王兴饭否合集 · 金字塔原理2 · 推荐系统实践
+          思想、人物、公司、方法论——来自书与笔记的知识地图
         </p>
         <div style={{ maxWidth: 480, margin: '0 auto' }}>
           <SearchBar large />
