@@ -228,7 +228,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         color: '#a0aec0',
         textAlign: 'center',
       }}>
-        Leon 的个人知识库 · 22 篇文章 · 王兴饭否合集 · 金字塔原理2 · 推荐系统实践
+        Leon 的个人知识库 · 40 篇文章 · 王兴 · 张一鸣 · 张小龙 · 王慧文 · 俞军 · 段永平 · 格鲁夫 · 维特根斯坦
       </footer>
     </div>
   );
