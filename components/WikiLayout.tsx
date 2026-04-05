@@ -44,7 +44,13 @@ const NAV = [
     label: '👤 人物',
     items: [
       { slug: '王兴', label: '王兴' },
-      { slug: '时事与社会', label: '时事与社会' },
+      { slug: '张一鸣', label: '张一鸣' },
+      { slug: '张小龙', label: '张小龙' },
+      { slug: '王慧文', label: '王慧文' },
+      { slug: '俞军', label: '俞军' },
+      { slug: '段永平', label: '段永平' },
+      { slug: '安迪·格鲁夫', label: '安迪·格鲁夫' },
+      { slug: '维特根斯坦', label: '维特根斯坦' },
     ],
   },
   {
