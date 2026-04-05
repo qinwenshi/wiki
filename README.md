@@ -2,7 +2,7 @@
 
 **思想、人物、公司、方法论——来自书与笔记的知识地图**
 
-🌐 **线上访问：** https://wiki-clone-green.vercel.app
+🌐 **线上访问：** https://wiki.tokbook.cn/
 
 ---
 
