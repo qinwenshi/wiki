@@ -12,6 +12,8 @@
 
 所有内容来源于真实书籍，由 AI Agent 辅助提炼整理，非机械摘抄，而是结构化的知识重建。
 
+> **灵感来源：** 本项目受 [wiki-gen-skill](https://gist.github.com/farzaa/c35ac0cfbeb957788650e36aabea836d#file-wiki-gen-skill-md) 启发——一个将个人日记、笔记、消息等私人数据编译成个人知识 wiki 的 AI Skill。原 Skill 定义了"你是一位作家，而非档案员"的核心理念：读懂条目的含义，写出捕捉理解的文章，而不是机械归档。本项目在此基础上扩展，以书籍为数据源，搭建了完整的 Next.js 展示层。
+
 ---
 
 ## 内容来源
