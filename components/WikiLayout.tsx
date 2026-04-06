@@ -52,6 +52,7 @@ const NAV = [
       { slug: '费曼学习法', label: '费曼学习法' },
       { slug: '维特根斯坦哲学', label: '维特根斯坦哲学' },
       { slug: '战略思维', label: '战略思维' },
+      { slug: '历史类比思维', label: '历史类比思维' },
       { slug: '创业与商业', label: '创业与商业' },
       { slug: '供需关系与产品设计', label: '供需关系' },
       { slug: '用户价值模型', label: '用户价值模型' },
@@ -79,9 +80,17 @@ const NAV = [
       { slug: '饭否文化与社区', label: '饭否文化与社区' },
       { slug: '经济与投资', label: '经济与投资' },
       { slug: '科技与互联网', label: '科技与互联网' },
+      { slug: '人工智能观察', label: '人工智能观察' },
       { slug: '历史与文明', label: '历史与文明' },
       { slug: '时事与社会', label: '时事与社会' },
       { slug: '语言与文化', label: '语言与文化' },
+      { slug: '人工智能观察', label: '人工智能观察' },
+    ],
+  },
+  {
+    label: '🔁 模式',
+    items: [
+      { slug: '历史类比思维', label: '历史类比思维' },
     ],
   },
   {
@@ -90,6 +99,7 @@ const NAV = [
       { slug: '2007-2010早期探索', label: '2007–2010 早期' },
       { slug: '2011-2015美团崛起', label: '2011–2015 美团' },
       { slug: '2016-2020成熟期', label: '2016–2020 成熟' },
+      { slug: '海内', label: '海内（2007）' },
     ],
   },
   {
@@ -168,7 +178,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         </div>
 
         {/* Article count badge */}
-        <span style={{ fontSize: '0.75em', color: '#718096', flexShrink: 0 }}>22 篇文章</span>
+        <span style={{ fontSize: '0.75em', color: '#718096', flexShrink: 0 }}>24 篇文章</span>
       </header>
 
       <div style={{ display: 'flex' }}>
