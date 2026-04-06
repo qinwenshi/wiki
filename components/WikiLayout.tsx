@@ -43,6 +43,7 @@ const NAV = [
       { slug: '段永平投资哲学', label: '段永平投资哲学' },
       { slug: '价值投资', label: '价值投资' },
       { slug: '金字塔原理', label: '金字塔原理' },
+      { slug: '费曼学习法', label: '费曼学习法' },
       { slug: '维特根斯坦哲学', label: '维特根斯坦哲学' },
       { slug: '创业与商业', label: '创业与商业' },
       { slug: '供需关系与产品设计', label: '供需关系' },
@@ -259,7 +260,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         color: '#a0aec0',
         textAlign: 'center',
       }}>
-        Leon 的个人知识库 · 44 篇文章 · 8位人物 · 3家公司 · 13篇哲学思想
+        Leon 的个人知识库 · 45 篇文章 · 8位人物 · 3家公司 · 14篇哲学思想
       </footer>
     </div>
   );
