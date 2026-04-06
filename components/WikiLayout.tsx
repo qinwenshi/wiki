@@ -18,6 +18,10 @@ const NAV = [
       { slug: '美团', label: '美团' },
       { slug: '字节跳动', label: '字节跳动' },
       { slug: '步步高', label: '步步高' },
+      { slug: 'OPPO', label: 'OPPO' },
+      { slug: 'vivo', label: 'vivo' },
+      { slug: '小霸王', label: '小霸王' },
+      { slug: '英特尔', label: '英特尔' },
     ],
   },
   {
@@ -31,6 +35,8 @@ const NAV = [
       { slug: '段永平', label: '段永平' },
       { slug: '安迪·格鲁夫', label: '安迪·格鲁夫' },
       { slug: '维特根斯坦', label: '维特根斯坦' },
+      { slug: '巴菲特', label: '巴菲特' },
+      { slug: '理查德·费曼', label: '理查德·费曼' },
     ],
   },
   {
@@ -92,6 +98,7 @@ const NAV = [
       { slug: '格鲁夫给经理人的第一课', label: '格鲁夫给经理人的第一课' },
       { slug: '赢', label: '赢（韦尔奇）' },
       { slug: '好战略坏战略', label: '好战略坏战略' },
+      { slug: '穷查理宝典', label: '穷查理宝典' },
     ],
   },
   {
