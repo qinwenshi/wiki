@@ -108,6 +108,7 @@ const NAV = [
       { slug: '赢', label: '赢（韦尔奇）' },
       { slug: '好战略坏战略', label: '好战略坏战略' },
       { slug: '穷查理宝典', label: '穷查理宝典' },
+      { slug: '学会提问', label: '学会提问' },
     ],
   },
   {
