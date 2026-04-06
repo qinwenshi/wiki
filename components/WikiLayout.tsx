@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import SearchBar from './SearchBar';
@@ -93,8 +93,17 @@ const NAV = [
 ];
 
 export default function WikiLayout({ title, articleTitle, children }: WikiLayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
+
+  // 移动端默认收起，桌面端默认展开
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    setSidebarOpen(!isMobile);
+    const handler = () => setSidebarOpen(window.innerWidth >= 768);
+    window.addEventListener('resize', handler);
+    return () => window.removeEventListener('resize', handler);
+  }, []);
 
   const isActive = (slug: string) =>
     pathname === `/wiki/${encodeURIComponent(slug)}` ||
