@@ -84,15 +84,20 @@ const NAV = [
     ],
   },
   {
+    label: '📖 书籍精读',
+    items: [
+      { slug: '格鲁夫给经理人的第一课', label: '格鲁夫给经理人的第一课' },
+      { slug: '赢', label: '赢（韦尔奇）' },
+      { slug: '好战略坏战略', label: '好战略坏战略' },
+    ],
+  },
+  {
     label: '🌿 生活',
     items: [
       { slug: '生活与饮食', label: '生活与饮食' },
       { slug: '其他观察', label: '其他观察' },
       { slug: '阅读与书单', label: '阅读与书单' },
       { slug: 'github精选项目', label: 'GitHub 精选项目' },
-      { slug: '格鲁夫给经理人的第一课', label: '格鲁夫给经理人的第一课' },
-      { slug: '赢', label: '赢（韦尔奇）' },
-      { slug: '好战略坏战略', label: '好战略坏战略' },
     ],
   },
 ];
