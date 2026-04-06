@@ -91,6 +91,7 @@ const NAV = [
       { slug: '阅读与书单', label: '阅读与书单' },
       { slug: 'github精选项目', label: 'GitHub 精选项目' },
       { slug: '格鲁夫给经理人的第一课', label: '格鲁夫给经理人的第一课' },
+      { slug: '赢', label: '赢（韦尔奇）' },
     ],
   },
 ];
@@ -262,7 +263,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         color: '#a0aec0',
         textAlign: 'center',
       }}>
-        Leon 的个人知识库 · 47 篇文章 · 8位人物 · 3家公司 · 14篇哲学思想
+        Leon 的个人知识库 · 48 篇文章 · 8位人物 · 3家公司 · 14篇哲学思想
       </footer>
     </div>
   );
