@@ -165,21 +165,21 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         </button>
 
         {/* Logo */}
-        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', flexShrink: 0 }}>
-          <span style={{ fontSize: '1.4em', lineHeight: 1 }}>📖</span>
-          <div style={{ lineHeight: 1.25 }}>
-            <div style={{ fontSize: '0.95em', fontWeight: 700, color: '#e2e8f0', letterSpacing: '0.02em' }}>Leon 的个人知识库</div>
-            <div style={{ fontSize: '0.65em', color: '#718096', letterSpacing: '0.05em' }}>PERSONAL WIKI</div>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', flexShrink: 0, minWidth: 0 }}>
+          <span style={{ fontSize: '1.4em', lineHeight: 1, flexShrink: 0 }}>📖</span>
+          <div className="logo-text" style={{ lineHeight: 1.25, overflow: 'hidden' }}>
+            <div style={{ fontSize: '0.95em', fontWeight: 700, color: '#e2e8f0', letterSpacing: '0.02em', whiteSpace: 'nowrap' }}>Leon 的个人知识库</div>
+            <div style={{ fontSize: '0.65em', color: '#718096', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>PERSONAL WIKI</div>
           </div>
         </Link>
 
         {/* Search */}
-        <div style={{ flex: 1, maxWidth: 480 }}>
+        <div style={{ flex: 1, minWidth: 0, maxWidth: 480 }}>
           <SearchBar />
         </div>
 
         {/* Article count badge */}
-        <span style={{ fontSize: '0.75em', color: '#718096', flexShrink: 0 }}>24 篇文章</span>
+        <span className="article-count-badge" style={{ fontSize: '0.75em', color: '#718096', flexShrink: 0, whiteSpace: 'nowrap' }}>24 篇文章</span>
       </header>
 
       <div style={{ display: 'flex' }}>

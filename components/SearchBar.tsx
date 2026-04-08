@@ -98,7 +98,7 @@ export default function SearchBar({ large = false }: SearchBarProps) {
   };
 
   return (
-    <div ref={containerRef} style={{ position: 'relative', width: large ? '100%' : 300 }}>
+    <div ref={containerRef} style={{ position: 'relative', width: '100%' }}>
       <form onSubmit={handleSubmit} style={{ display: 'flex', gap: 4 }}>
         <div style={{ position: 'relative', flex: 1 }}>
           <input

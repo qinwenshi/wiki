@@ -157,3 +157,20 @@ body { margin: 0; }
   border: 1px solid #e8e8e8;
   border-radius: 4px;
 }
+
+/* ── Mobile header responsive ── */
+@media (max-width: 540px) {
+  .logo-text {
+    display: none;
+  }
+  .article-count-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Prevent header from causing horizontal scroll */
+  header {
+    overflow: hidden;
+  }
+}
