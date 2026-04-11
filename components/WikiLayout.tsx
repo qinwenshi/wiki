@@ -71,12 +71,14 @@ const NAV = [
       { slug: '20-70-10人才梯队管理', label: '20-70-10 人才梯队' },
       { slug: '4E1P招聘框架', label: '4E1P 招聘框架' },
       { slug: '写作结构技术', label: '写作结构技术' },
+      { slug: '财务报表分析框架', label: '财务报表分析框架' },
     ],
   },
   {
     label: '📚 知识领域',
     items: [
       { slug: '推荐系统概论', label: '推荐系统概论' },
+      { slug: '财务报表基础', label: '财务报表基础' },
       { slug: '饭否文化与社区', label: '饭否文化与社区' },
       { slug: '经济与投资', label: '经济与投资' },
       { slug: '科技与互联网', label: '科技与互联网' },
@@ -290,7 +292,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         color: '#a0aec0',
         textAlign: 'center',
       }}>
-        Leon 的个人知识库 · 48 篇文章 · 8位人物 · 3家公司 · 14篇哲学思想
+        Leon 的个人知识库 · 50 篇文章 · 8位人物 · 3家公司 · 14篇哲学思想
       </footer>
     </div>
   );
