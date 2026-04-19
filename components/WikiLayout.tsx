@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import SearchBar from './SearchBar';
+import { useVimKeys } from '../hooks/useVimKeys';
 
 interface WikiLayoutProps {
   title: string;
@@ -153,8 +154,10 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
   const navRef = useRef<HTMLElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
 
-  // 移动端默认收起，桌面端默认展开
+  useVimKeys(searchRef);
+
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
     setSidebarOpen(!isMobile);
@@ -163,7 +166,6 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
     return () => window.removeEventListener('resize', handler);
   }, []);
 
-  // 侧边栏打开或路径变化时，自动滚动到当前激活的链接
   useEffect(() => {
     if (!sidebarOpen || !navRef.current) return;
     const active = navRef.current.querySelector<HTMLElement>('[data-active="true"]');
@@ -176,99 +178,115 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
     pathname === `/wiki/${encodeURIComponent(slug)}` ||
     pathname === `/wiki/${slug}`;
 
+  const C = {
+    bg0: 'var(--background0)',
+    bg1: 'var(--background1)',
+    bg2: 'var(--background2)',
+    fg0: 'var(--foreground0)',
+    fg1: 'var(--foreground1)',
+    fg2: 'var(--foreground2)',
+    yellow: 'var(--gb-yellow)',
+    blue: 'var(--gb-blue)',
+    aqua: 'var(--gb-aqua)',
+    green: 'var(--gb-green)',
+  };
+
   return (
-    <div style={{ minHeight: '100vh', background: '#fff', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
-      {/* ── Header ── */}
+    <div style={{ minHeight: '100vh', background: C.bg0, fontFamily: 'inherit' }}>
+      {/* ── Header (topbar) ── */}
       <header style={{
         display: 'flex',
         alignItems: 'center',
-        padding: '0 20px',
-        borderBottom: '1px solid #e2e8f0',
-        background: '#1a1a2e',
-        height: 52,
+        padding: '0 16px',
+        borderBottom: `1px solid ${C.bg2}`,
+        background: C.bg1,
+        height: 44,
         position: 'sticky',
         top: 0,
         zIndex: 100,
-        gap: 16,
+        gap: 12,
       }}>
-        {/* Toggle sidebar */}
         <button
           onClick={() => setSidebarOpen(o => !o)}
           aria-label="切换侧边栏"
-          style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#a0aec0', fontSize: '1.1em', padding: '4px 6px', borderRadius: 4, flexShrink: 0 }}
+          style={{
+            background: 'none',
+            border: '1px solid transparent',
+            cursor: 'pointer',
+            color: C.fg2,
+            fontSize: '1em',
+            padding: '2px 6px',
+            fontFamily: 'inherit',
+            flexShrink: 0,
+          }}
         >
-          ☰
+          {sidebarOpen ? '▣' : '▢'}
         </button>
 
-        {/* Logo */}
-        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none', flexShrink: 0, minWidth: 0 }}>
-          <span style={{ fontSize: '1.4em', lineHeight: 1, flexShrink: 0 }}>📖</span>
-          <div className="logo-text" style={{ lineHeight: 1.25, overflow: 'hidden' }}>
-            <div style={{ fontSize: '0.95em', fontWeight: 700, color: '#e2e8f0', letterSpacing: '0.02em', whiteSpace: 'nowrap' }}>Leon 的个人知识库</div>
-            <div style={{ fontSize: '0.65em', color: '#718096', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>PERSONAL WIKI</div>
-          </div>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none', flexShrink: 0, minWidth: 0 }}>
+          <span style={{ color: C.green, fontWeight: 700, fontSize: '1em', whiteSpace: 'nowrap' }}>
+            ~/wiki
+          </span>
+          <span className="logo-text" style={{ color: C.fg2, fontSize: '0.8em', whiteSpace: 'nowrap' }}>
+            Leon 的个人知识库
+          </span>
         </Link>
 
-        {/* Search */}
-        <div style={{ flex: 1, minWidth: 0, maxWidth: 480 }}>
-          <SearchBar />
+        <div style={{ flex: 1, minWidth: 0, maxWidth: 420 }}>
+          <SearchBar inputRef={searchRef} />
         </div>
 
-        {/* Article count badge */}
-        <span className="article-count-badge" style={{ fontSize: '0.75em', color: '#718096', flexShrink: 0, whiteSpace: 'nowrap' }}>90 篇文章</span>
+        <span className="article-count-badge" style={{ fontSize: '0.75em', color: C.fg2, flexShrink: 0, whiteSpace: 'nowrap' }}>
+          [90]
+        </span>
       </header>
 
       <div style={{ display: 'flex' }}>
-        {/* ── Left Sidebar ── */}
+        {/* ── Sidebar ── */}
         {sidebarOpen && (
           <nav ref={navRef} style={{
-            width: 200,
+            width: 196,
             flexShrink: 0,
-            padding: '12px 0',
-            borderRight: '1px solid #e2e8f0',
-            minHeight: 'calc(100vh - 52px)',
-            background: '#fafafa',
+            padding: '8px 0',
+            borderRight: `1px solid ${C.bg2}`,
+            minHeight: 'calc(100vh - 44px)',
+            background: C.bg1,
             overflowY: 'auto',
             position: 'sticky',
-            top: 52,
+            top: 44,
             alignSelf: 'flex-start',
-            maxHeight: 'calc(100vh - 52px)',
+            maxHeight: 'calc(100vh - 44px)',
           }}>
-            {/* Home link */}
-            <div style={{ padding: '0 12px 8px' }}>
+            <div style={{ padding: '0 8px 6px' }}>
               <Link href="/" style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 6,
-                padding: '6px 8px',
-                borderRadius: 5,
+                display: 'block',
+                padding: '4px 8px',
                 textDecoration: 'none',
                 fontSize: '0.85em',
-                color: pathname === '/' ? '#1a1a2e' : '#4a5568',
-                fontWeight: pathname === '/' ? 600 : 400,
-                background: pathname === '/' ? '#e9ecf7' : 'transparent',
+                color: pathname === '/' ? C.yellow : C.fg1,
+                background: pathname === '/' ? C.bg2 : 'transparent',
+                borderLeft: pathname === '/' ? `2px solid ${C.yellow}` : '2px solid transparent',
               }}>
-                🏠 <span>首页</span>
+                ~ 首页
               </Link>
             </div>
 
-            <div style={{ borderTop: '1px solid #e2e8f0', margin: '0 12px 8px' }} />
+            <div style={{ borderTop: `1px solid ${C.bg2}`, margin: '0 8px 6px' }} />
 
-            {/* Category groups */}
             {NAV.map((group) => (
-              <div key={group.label} style={{ marginBottom: 4 }}>
+              <div key={group.label} style={{ marginBottom: 2 }}>
                 <div style={{
-                  padding: '4px 20px',
+                  padding: '3px 16px',
                   fontSize: '0.7em',
                   fontWeight: 700,
-                  color: '#a0aec0',
+                  color: C.fg2,
                   textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                  marginTop: 8,
+                  letterSpacing: '0.06em',
+                  marginTop: 6,
                 }}>
                   {group.label}
                 </div>
-                <ul style={{ listStyle: 'none', margin: 0, padding: '0 8px' }}>
+                <ul style={{ listStyle: 'none', margin: 0, padding: '0 6px' }}>
                   {group.items.map((item) => {
                     const active = isActive(item.slug);
                     return (
@@ -278,18 +296,15 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
                           data-active={active ? 'true' : undefined}
                           style={{
                             display: 'block',
-                            padding: '4px 12px',
-                            borderRadius: 5,
+                            padding: '3px 10px',
                             textDecoration: 'none',
                             fontSize: '0.82em',
-                            color: active ? '#1a1a2e' : '#4a5568',
-                            fontWeight: active ? 600 : 400,
-                            background: active ? '#e9ecf7' : 'transparent',
-                            borderLeft: active ? '3px solid #3366cc' : '3px solid transparent',
-                            transition: 'background 0.1s',
+                            color: active ? C.yellow : C.fg1,
+                            background: active ? C.bg2 : 'transparent',
+                            borderLeft: active ? `2px solid ${C.yellow}` : '2px solid transparent',
                           }}
                         >
-                          {item.label}
+                          {active ? '❯ ' : '  '}{item.label}
                         </Link>
                       </li>
                     );
@@ -300,16 +315,15 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
           </nav>
         )}
 
-        {/* ── Main Content ── */}
-        <main style={{ flex: 1, padding: '28px 40px', maxWidth: 900, minWidth: 0 }}>
-          {/* Source badge */}
+        {/* ── Main ── */}
+        <main style={{ flex: 1, padding: '24px 36px', maxWidth: 860, minWidth: 0 }}>
           <h1 style={{
-            fontSize: '1.85em',
+            fontSize: '1.5em',
             fontWeight: 700,
-            color: '#1a1a2e',
-            margin: '0 0 20px',
-            paddingBottom: 12,
-            borderBottom: '2px solid #e2e8f0',
+            color: C.green,
+            margin: '0 0 18px',
+            paddingBottom: 10,
+            borderBottom: `1px solid ${C.bg2}`,
             lineHeight: 1.3,
           }}
             dangerouslySetInnerHTML={{ __html: title }}
@@ -318,16 +332,25 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         </main>
       </div>
 
-      {/* ── Footer ── */}
+      {/* ── Statusbar footer ── */}
       <footer style={{
-        borderTop: '1px solid #e2e8f0',
-        padding: '16px 24px',
-        background: '#fafafa',
-        fontSize: '0.8em',
-        color: '#a0aec0',
-        textAlign: 'center',
+        borderTop: `1px solid ${C.bg2}`,
+        padding: '4px 16px',
+        background: C.bg1,
+        fontSize: '0.75em',
+        color: C.fg2,
+        display: 'flex',
+        gap: 16,
+        alignItems: 'center',
+        fontFamily: 'inherit',
       }}>
-        Leon 的个人知识库 · 90 篇文章 · 13位人物 · 7家公司 · 19篇哲学思想
+        <span style={{ color: C.green, fontWeight: 700 }}>NORMAL</span>
+        <span>~/wiki</span>
+        <span style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', color: C.fg1 }}>
+          {articleTitle || 'index'}
+        </span>
+        <span style={{ color: C.fg2 }}>j/k:滚动 &nbsp; gg/G:顶/底 &nbsp; /:搜索</span>
+        <span style={{ color: C.fg2 }}>90篇</span>
       </footer>
     </div>
   );

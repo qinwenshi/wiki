@@ -6,8 +6,16 @@ export default function MermaidRenderer() {
     import('mermaid').then((mermaid) => {
       mermaid.default.initialize({
         startOnLoad: false,
-        theme: 'default',
+        theme: 'dark',
         securityLevel: 'loose',
+        themeVariables: {
+          darkMode: true,
+          background: '#282828',
+          primaryColor: '#458588',
+          primaryTextColor: '#ebdbb2',
+          lineColor: '#a89984',
+          edgeLabelBackground: '#3c3836',
+        },
       });
       mermaid.default.run({
         querySelector: '.mermaid',

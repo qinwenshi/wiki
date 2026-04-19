@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@webtui/css": "^0.1.7",
+    "@webtui/theme-gruvbox": "^0.0.2",
     "cheerio": "^1.0.0",
     "gray-matter": "^4.0.3",
     "mermaid": "^11.14.0",
