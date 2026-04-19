@@ -310,26 +310,43 @@ nav ul li::before {
   font-style: italic;
 }
 
+/* Kill WebTUI table pseudo-element borders inside wiki content */
+.wiki-content table::before,
+.wiki-content table th::before,
+.wiki-content table td::before,
+.wiki-content table th::after,
+.wiki-content table td::after {
+  content: none !important;
+  display: none !important;
+}
+
 .wiki-content table {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
   width: 100%;
   margin: 14px 0;
   font-size: 0.89em;
+  position: static !important;
 }
 
 .wiki-content table th, .wiki-content table td {
-  padding: 6px 10px;
+  border: 1px solid var(--surface-raised) !important;
+  padding: 6px 10px !important;
   text-align: left;
+  position: static !important;
 }
 
 .wiki-content table th {
   color: var(--accent-yellow);
   font-weight: bold;
+  background: var(--surface-muted);
 }
 
 .wiki-content table tr:nth-child(even) td,
 .wiki-content table tr:nth-child(even) th {
-  background: var(--surface-muted);
+  background: color-mix(in srgb, var(--surface-muted) 60%, transparent);
 }
+
 
 .wiki-content img {
   max-width: 100%;
