@@ -67,6 +67,12 @@ nav a {
   line-height: 1.2 !important;
 }
 
+/* Kill WebTUI typography.css ul li:before { content: "- " } in nav */
+nav ul li::before {
+  content: none !important;
+  display: none !important;
+}
+
 /* ── Search dropdown ── */
 .wiki-clone-search-dropdown {
   position: absolute;
