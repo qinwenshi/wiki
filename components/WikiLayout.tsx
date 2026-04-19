@@ -205,7 +205,8 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         display: 'flex',
         alignItems: 'center',
         padding: '0 16px',
-        borderBottom: `1px solid ${C.bg2}`,
+        border: `1px solid var(--box-border-color)`,
+        borderTop: 'none',
         background: C.bg1,
         height: 44,
         position: 'sticky',
@@ -270,7 +271,8 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             width: 220,
             flexShrink: 0,
             padding: '8px 0 16px',
-            borderRight: `1px solid ${C.bg2}`,
+            border: `1px solid var(--box-border-color)`,
+            borderTop: 'none',
             minHeight: 'calc(100vh - 44px)',
             background: C.bg1,
             overflowY: 'auto',
@@ -279,7 +281,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             alignSelf: 'flex-start',
             maxHeight: 'calc(100vh - 44px)',
             fontSize: '13px',
-            lineHeight: '1.2',  /* override inherited 25.2px body line-height */
+            lineHeight: '1.2',
           }}>
             <Link href="/" style={{
               display: 'block',
@@ -372,7 +374,11 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         )}
 
         {/* ── Main ── */}
-        <main style={{ flex: 1, padding: '24px 36px', maxWidth: 860, minWidth: 0 }}>
+        <main style={{
+          flex: 1, padding: '24px 36px', maxWidth: 860, minWidth: 0,
+          border: `1px solid var(--box-border-color)`,
+          borderTop: 'none', borderLeft: 'none',
+        }}>
           <h1 style={{
             fontSize: '1.4em',
             fontWeight: 700,
@@ -390,7 +396,8 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
 
       {/* ── Statusbar footer ── */}
       <footer style={{
-        borderTop: `1px solid ${C.bg2}`,
+        border: `1px solid var(--box-border-color)`,
+        borderBottom: 'none',
         padding: '4px 16px',
         background: C.bg1,
         fontSize: '0.75em',

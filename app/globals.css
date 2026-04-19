@@ -42,6 +42,9 @@
   --foreground1: var(--text-tertiary);
   --foreground2: var(--text-primary);
 
+  /* WebTUI box border color */
+  --box-border-color: #45475a;  /* surface-raised: subtle visible border */
+
   /* Typography */
   --font-mono: 'JetBrains Mono', Menlo, Monaco, 'Cascadia Code', ui-monospace, monospace, 'Symbols Nerd Font';
 }
