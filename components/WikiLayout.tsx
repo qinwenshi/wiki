@@ -240,17 +240,16 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         <button
           onClick={() => setSearchOpen(true)}
           style={{
-            display: 'flex', alignItems: 'center', gap: 8,
+            display: 'flex', alignItems: 'center', gap: 6,
             background: C.bg0, color: C.fg2,
             border: `1px solid ${C.bg2}`,
-            padding: '4px 12px',
+            padding: '4px 10px',
             cursor: 'pointer', fontFamily: 'inherit',
             fontSize: '0.82em', whiteSpace: 'nowrap',
-            minWidth: 160,
           }}
         >
           <span>🔍</span>
-          <span style={{ flex: 1, textAlign: 'left', color: C.fg2 }}>搜索…</span>
+          <span className="search-trigger-label" style={{ flex: 1, textAlign: 'left', color: C.fg2 }}>搜索…</span>
           <span style={{ color: C.fg2, fontSize: '0.85em', opacity: 0.7 }}>/</span>
         </button>
 

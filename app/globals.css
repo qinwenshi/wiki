@@ -283,8 +283,10 @@ html, body {
 @media (max-width: 540px) {
   .logo-text { display: none; }
   .article-count-badge { display: none; }
+  .search-trigger-label { display: none; }
 }
 
 @media (max-width: 768px) {
   header { overflow: hidden; }
+  main { padding: 16px 16px !important; }
 }

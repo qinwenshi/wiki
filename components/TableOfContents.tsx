@@ -12,7 +12,7 @@ export default function TableOfContents() {
   const [entries, setEntries] = useState<TocEntry[]>([]);
 
   useEffect(() => {
-    const headings = document.querySelectorAll('.mw-parser-output h2, .mw-parser-output h3');
+    const headings = document.querySelectorAll('.wiki-content h2, .wiki-content h3, .mw-parser-output h2, .mw-parser-output h3');
     const toc: TocEntry[] = [];
     headings.forEach((h) => {
       const heading = h as HTMLElement;
