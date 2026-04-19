@@ -179,16 +179,20 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
     pathname === `/wiki/${slug}`;
 
   const C = {
-    bg0: 'var(--background0)',
-    bg1: 'var(--background1)',
-    bg2: 'var(--background2)',
-    fg0: 'var(--foreground0)',
-    fg1: 'var(--foreground1)',
-    fg2: 'var(--foreground2)',
-    yellow: 'var(--gb-yellow)',
-    blue: 'var(--gb-blue)',
-    aqua: 'var(--gb-aqua)',
-    green: 'var(--gb-green)',
+    bg0:    'var(--surface-base)',
+    bg1:    'var(--surface-muted)',
+    bg2:    'var(--surface-strong)',
+    bg3:    'var(--surface-raised)',
+    fg0:    'var(--text-secondary)',
+    fg1:    'var(--text-tertiary)',
+    fg2:    'var(--text-primary)',
+    yellow: 'var(--accent-yellow)',
+    blue:   'var(--accent-blue)',
+    sky:    'var(--accent-sky)',
+    green:  'var(--accent-green)',
+    orange: 'var(--accent-peach)',
+    mauve:  'var(--accent-mauve)',
+    teal:   'var(--accent-teal)',
   };
 
   return (
@@ -293,27 +297,30 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             {NAV.map((group) => (
               <div key={group.label} style={{ marginBottom: 2 }}>
                 <div style={{
-                  padding: '3px 16px',
-                  fontSize: '0.7em',
+                  padding: '4px 10px',
+                  fontSize: '0.78em',
                   fontWeight: 700,
-                  color: C.fg2,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.06em',
-                  marginTop: 6,
+                  color: C.fg1,
+                  marginTop: 8,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 4,
                 }}>
-                  {group.label}
+                  <span style={{ color: C.fg2 }}>∨</span> {group.label}
                 </div>
-                <ul style={{ listStyle: 'none', margin: 0, padding: '0 6px' }}>
-                  {group.items.map((item) => {
+                <ul style={{ listStyle: 'none', margin: 0, padding: '0' }}>
+                  {group.items.map((item, idx, arr) => {
                     const active = isActive(item.slug);
+                    const isLast = idx === arr.length - 1;
                     return (
                       <li key={item.slug}>
                         <Link
                           href={`/wiki/${encodeURIComponent(item.slug)}`}
                           data-active={active ? 'true' : undefined}
                           style={{
-                            display: 'block',
-                            padding: '3px 10px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            padding: '2px 6px 2px 0',
                             textDecoration: 'none',
                             fontSize: '0.82em',
                             color: active ? C.yellow : C.fg1,
@@ -321,7 +328,10 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
                             borderLeft: active ? `2px solid ${C.yellow}` : '2px solid transparent',
                           }}
                         >
-                          {active ? '❯ ' : '  '}{item.label}
+                          <span style={{ color: C.fg2, paddingLeft: 8, paddingRight: 4, flexShrink: 0, fontFamily: 'monospace' }}>
+                            {isLast ? '└─' : '├─'}
+                          </span>
+                          {item.label}
                         </Link>
                       </li>
                     );
@@ -335,15 +345,15 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         {/* ── Main ── */}
         <main style={{ flex: 1, padding: '24px 36px', maxWidth: 860, minWidth: 0 }}>
           <h1 style={{
-            fontSize: '1.5em',
+            fontSize: '1.4em',
             fontWeight: 700,
-            color: C.green,
+            color: C.orange,
             margin: '0 0 18px',
             paddingBottom: 10,
             borderBottom: `1px solid ${C.bg2}`,
             lineHeight: 1.3,
           }}
-            dangerouslySetInnerHTML={{ __html: title }}
+            dangerouslySetInnerHTML={{ __html: '# ' + title }}
           />
           {children}
         </main>
@@ -361,13 +371,12 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         alignItems: 'center',
         fontFamily: 'inherit',
       }}>
-        <span style={{ color: C.green, fontWeight: 700 }}>NORMAL</span>
-        <span>~/wiki</span>
-        <span style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', color: C.fg1 }}>
+        <span style={{ color: C.bg0, background: C.green, fontWeight: 700, padding: '0 6px' }}>NORMAL</span>
+        <span style={{ color: C.fg2 }}>~/wiki</span>
+        <span style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', color: C.fg0 }}>
           {articleTitle || 'index'}
         </span>
-        <span style={{ color: C.fg2 }}>j/k:滚动 &nbsp; gg/G:顶/底 &nbsp; /:搜索</span>
-        <span style={{ color: C.fg2 }}>90篇</span>
+        <span style={{ color: C.fg2 }}>▼ h j k l /</span>
       </footer>
     </div>
   );

@@ -8,15 +8,53 @@
 @import '@webtui/css/components/typography.css';
 @import '@webtui/css/components/table.css';
 @import '@webtui/css/components/badge.css';
-@import '@webtui/theme-gruvbox';
+
+/* ── Design tokens (WebTUI × Catppuccin Mocha) ── */
+:root {
+  /* Surface */
+  --surface-base:   #000000;
+  --surface-muted:  #1e1e2e;
+  --surface-strong: #313244;
+  --surface-raised: #45475a;
+
+  /* Text */
+  --text-primary:   #9399b2;   /* muted / labels */
+  --text-secondary: #cdd6f4;   /* main body text */
+  --text-tertiary:  #bac2de;   /* captions / hints */
+  --text-inverse:   #89dceb;   /* accent cyan */
+
+  /* Accents (Catppuccin Mocha) */
+  --accent-blue:    #89b4fa;
+  --accent-green:   #a6e3a1;
+  --accent-yellow:  #f9e2af;
+  --accent-peach:   #fab387;
+  --accent-mauve:   #cba6f7;
+  --accent-red:     #f38ba8;
+  --accent-teal:    #94e2d5;
+  --accent-sky:     #89dceb;
+
+  /* WebTUI internal mapping */
+  --background0: var(--surface-base);
+  --background1: var(--surface-muted);
+  --background2: var(--surface-strong);
+  --background3: var(--surface-raised);
+  --foreground0: var(--text-secondary);
+  --foreground1: var(--text-tertiary);
+  --foreground2: var(--text-primary);
+
+  /* Typography */
+  --font-mono: 'JetBrains Mono', Menlo, Monaco, 'Cascadia Code', ui-monospace, monospace, 'Symbols Nerd Font';
+}
 
 /* ── Layout base ── */
 html, body {
   height: 100%;
-  background-color: var(--background0);
-  color: var(--foreground0);
-  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
-  font-size: 14px;
+  background-color: var(--surface-base);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.2px;
 }
 
 /* ── Search dropdown ── */
@@ -25,8 +63,8 @@ html, body {
   top: 100%;
   left: 0;
   right: 0;
-  background: var(--background1);
-  border: 1px solid var(--background3);
+  background: var(--surface-muted);
+  border: 1px solid var(--surface-raised);
   border-top: none;
   z-index: 1000;
   max-height: 300px;
@@ -37,30 +75,31 @@ html, body {
   display: block;
   padding: 6px 10px;
   text-decoration: none;
-  color: var(--foreground0);
-  border-bottom: 1px solid var(--background2);
-  font-size: 0.9em;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--surface-strong);
+  font-size: 1em;
 }
 
 .wiki-clone-search-dropdown a:hover,
 .wiki-clone-search-dropdown a.selected {
-  background: var(--background2);
+  background: var(--surface-strong);
+  color: var(--text-inverse);
 }
 
 /* ── Backlinks ── */
 .backlinks-panel {
-  border: 1px solid var(--background2);
-  background: var(--background1);
+  border: 1px solid var(--surface-strong);
+  background: var(--surface-muted);
   padding: 10px 14px;
   margin-top: 24px;
 }
 
 .backlinks-panel h3 {
   margin: 0 0 8px 0;
-  font-size: 0.85em;
+  font-size: 0.83em;
   font-weight: bold;
   cursor: pointer;
-  color: var(--gb-yellow);
+  color: var(--accent-yellow);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -79,24 +118,24 @@ html, body {
 
 .backlinks-list li::before {
   content: '← ';
-  color: var(--foreground2);
+  color: var(--text-primary);
 }
 
 .backlinks-list a {
-  color: var(--gb-blue);
+  color: var(--accent-blue);
   text-decoration: none;
   font-size: 0.88em;
 }
 
 .backlinks-list a:hover {
-  color: var(--gb-aqua);
+  color: var(--accent-sky);
   text-decoration: underline;
 }
 
 /* ── TOC ── */
 .wiki-toc {
-  background: var(--background1);
-  border: 1px solid var(--background2);
+  background: var(--surface-muted);
+  border: 1px solid var(--surface-strong);
   padding: 10px 16px;
   display: inline-block;
   min-width: 200px;
@@ -107,8 +146,8 @@ html, body {
   font-weight: bold;
   text-align: center;
   margin-bottom: 8px;
-  color: var(--gb-yellow);
-  font-size: 0.85em;
+  color: var(--accent-yellow);
+  font-size: 0.78em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -121,108 +160,130 @@ html, body {
 .wiki-toc li { margin: 3px 0; }
 
 .wiki-toc a {
-  color: var(--gb-blue);
+  color: var(--accent-blue);
   text-decoration: none;
-  font-size: 0.85em;
+  font-size: 0.83em;
 }
 
 .wiki-toc a:hover {
-  color: var(--gb-aqua);
+  color: var(--accent-sky);
   text-decoration: underline;
 }
 
 /* ── Article content ── */
 .wiki-content {
-  line-height: 1.75;
-  font-size: 14px;
-  color: var(--foreground0);
+  line-height: 1.6;
+  font-size: 1em;
+  color: var(--text-secondary);
 }
 
 .wiki-content h1 {
-  color: var(--gb-green);
-  border-bottom: 1px solid var(--background2);
+  color: var(--accent-peach);
+  border-bottom: 1px solid var(--surface-strong);
   padding-bottom: 6px;
   margin-top: 28px;
   margin-bottom: 14px;
-  font-size: 1.5em;
+  font-size: 1.33em;
+  font-weight: 700;
+}
+
+.wiki-content h1::before {
+  content: '# ';
+  color: var(--accent-peach);
+  opacity: 0.5;
 }
 
 .wiki-content h2 {
-  color: var(--gb-green);
-  border-bottom: 1px solid var(--background2);
+  color: var(--accent-peach);
+  border-bottom: 1px solid var(--surface-strong);
   padding-bottom: 4px;
   margin-top: 24px;
   margin-bottom: 12px;
-  font-size: 1.2em;
+  font-size: 1.11em;
+  font-weight: 700;
+}
+
+.wiki-content h2::before {
+  content: '## ';
+  color: var(--accent-peach);
+  opacity: 0.5;
 }
 
 .wiki-content h3 {
-  color: var(--gb-aqua);
+  color: var(--accent-sky);
   margin-top: 20px;
   margin-bottom: 8px;
-  font-size: 1.05em;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.wiki-content h3::before {
+  content: '### ';
+  color: var(--accent-sky);
+  opacity: 0.5;
 }
 
 .wiki-content h4, .wiki-content h5 {
-  color: var(--foreground1);
+  color: var(--text-tertiary);
   margin-top: 16px;
   margin-bottom: 8px;
 }
 
 .wiki-content p {
-  margin: 10px 0;
+  margin: 10.8px 0;
 }
 
 .wiki-content a {
-  color: var(--gb-blue);
+  color: var(--accent-blue);
   text-decoration: underline;
 }
 
 .wiki-content a:hover {
-  color: var(--gb-aqua);
+  color: var(--accent-sky);
 }
 
 .wiki-content strong, .wiki-content b {
-  color: var(--gb-yellow);
-  font-weight: bold;
+  color: var(--accent-yellow);
+  font-weight: 700;
 }
 
 .wiki-content em, .wiki-content i {
-  color: var(--foreground1);
+  color: var(--text-tertiary);
   font-style: italic;
 }
 
 .wiki-content code {
-  color: var(--gb-orange);
-  background: var(--background1);
+  color: var(--accent-peach);
+  background: var(--surface-muted);
   padding: 1px 5px;
   font-family: inherit;
-  font-size: 0.92em;
-  border: 1px solid var(--background2);
+  font-size: 0.89em;
+  border: 1px solid var(--surface-strong);
 }
 
 .wiki-content pre {
-  background: var(--background1);
-  border: 1px solid var(--background2);
+  background: var(--surface-muted);
+  border: 1px solid var(--surface-strong);
+  border-left: 3px solid var(--accent-mauve);
   padding: 14px 16px;
   overflow-x: auto;
   margin: 14px 0;
 }
 
 .wiki-content pre code {
-  color: var(--foreground0);
+  color: var(--text-secondary);
   background: none;
   padding: 0;
   border: none;
-  font-size: 0.9em;
+  font-size: 0.89em;
 }
 
 .wiki-content blockquote {
-  border-left: 3px solid var(--gb-yellow);
+  border-left: 3px solid var(--accent-yellow);
   margin: 14px 0;
   padding: 8px 16px;
-  background: var(--background1);
-  color: var(--foreground1);
+  background: var(--surface-muted);
+  color: var(--text-tertiary);
   font-style: italic;
 }
 
@@ -230,23 +291,23 @@ html, body {
   border-collapse: collapse;
   width: 100%;
   margin: 14px 0;
-  font-size: 0.92em;
+  font-size: 0.89em;
 }
 
 .wiki-content table th, .wiki-content table td {
-  border: 1px solid var(--background2);
+  border: 1px solid var(--surface-strong);
   padding: 6px 10px;
   text-align: left;
 }
 
 .wiki-content table th {
-  background: var(--background1);
-  color: var(--gb-yellow);
+  background: var(--surface-muted);
+  color: var(--accent-yellow);
   font-weight: bold;
 }
 
 .wiki-content table tr:nth-child(even) {
-  background: var(--background1);
+  background: var(--surface-muted);
 }
 
 .wiki-content img {
@@ -265,7 +326,7 @@ html, body {
 
 .wiki-content hr {
   border: none;
-  border-top: 1px solid var(--background2);
+  border-top: 1px solid var(--surface-strong);
   margin: 20px 0;
 }
 
@@ -274,9 +335,15 @@ html, body {
   text-align: center;
   margin: 16px 0;
   padding: 16px;
-  background: var(--background1);
-  border: 1px solid var(--background2);
+  background: var(--surface-muted);
+  border: 1px solid var(--surface-strong);
   overflow-x: auto;
+}
+
+/* ── Focus-visible (WCAG 2.2 AA) ── */
+:focus-visible {
+  outline: 2px solid var(--accent-sky);
+  outline-offset: 2px;
 }
 
 /* ── Mobile ── */
@@ -290,3 +357,4 @@ html, body {
   header { overflow: hidden; }
   main { padding: 16px 16px !important; }
 }
+

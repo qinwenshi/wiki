@@ -76,17 +76,19 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
   if (!open) return null;
 
   const C = {
-    bg0: 'var(--background0)',
-    bg1: 'var(--background1)',
-    bg2: 'var(--background2)',
-    fg0: 'var(--foreground0)',
-    fg1: 'var(--foreground1)',
-    fg2: 'var(--foreground2)',
-    yellow: 'var(--gb-yellow)',
-    blue: 'var(--gb-blue)',
-    aqua: 'var(--gb-aqua)',
-    green: 'var(--gb-green)',
-    orange: 'var(--gb-orange)',
+    bg0:    'var(--surface-base)',
+    bg1:    'var(--surface-muted)',
+    bg2:    'var(--surface-strong)',
+    bg3:    'var(--surface-raised)',
+    fg0:    'var(--text-secondary)',
+    fg1:    'var(--text-tertiary)',
+    fg2:    'var(--text-primary)',
+    yellow: 'var(--accent-yellow)',
+    blue:   'var(--accent-blue)',
+    sky:    'var(--accent-sky)',
+    green:  'var(--accent-green)',
+    orange: 'var(--accent-peach)',
+    mauve:  'var(--accent-mauve)',
   };
 
   return (
@@ -173,7 +175,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                 borderBottom: `1px solid ${C.bg2}`,
               }}
             >
-              <div style={{ color: i === selectedIndex ? C.aqua : C.fg0, fontSize: '0.88em', fontWeight: 600 }}>
+              <div style={{ color: i === selectedIndex ? C.sky : C.fg0, fontSize: '0.88em', fontWeight: 600 }}>
                 {i === selectedIndex ? '❯ ' : '  '}{r.title}
               </div>
               {r.excerpt && (

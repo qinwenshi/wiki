@@ -10,11 +10,17 @@ export default function MermaidRenderer() {
         securityLevel: 'loose',
         themeVariables: {
           darkMode: true,
-          background: '#282828',
-          primaryColor: '#458588',
-          primaryTextColor: '#ebdbb2',
-          lineColor: '#a89984',
-          edgeLabelBackground: '#3c3836',
+          background: '#1e1e2e',
+          primaryColor: '#89b4fa',
+          primaryTextColor: '#cdd6f4',
+          primaryBorderColor: '#313244',
+          lineColor: '#6c7086',
+          secondaryColor: '#313244',
+          tertiaryColor: '#45475a',
+          edgeLabelBackground: '#1e1e2e',
+          clusterBkg: '#1e1e2e',
+          titleColor: '#cba6f7',
+          nodeTextColor: '#cdd6f4',
         },
       });
       mermaid.default.run({
