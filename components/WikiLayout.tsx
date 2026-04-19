@@ -266,9 +266,9 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         {/* ── Sidebar ── */}
         {sidebarOpen && (
           <nav ref={navRef} style={{
-            width: 196,
+            width: 220,
             flexShrink: 0,
-            padding: '8px 0',
+            padding: '8px 0 16px',
             borderRight: `1px solid ${C.bg2}`,
             minHeight: 'calc(100vh - 44px)',
             background: C.bg1,
@@ -277,38 +277,39 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             top: 44,
             alignSelf: 'flex-start',
             maxHeight: 'calc(100vh - 44px)',
+            fontSize: '0.83em',
           }}>
-            <div style={{ padding: '0 8px 6px' }}>
-              <Link href="/" style={{
-                display: 'block',
-                padding: '4px 8px',
-                textDecoration: 'none',
-                fontSize: '0.85em',
-                color: pathname === '/' ? C.yellow : C.fg1,
-                background: pathname === '/' ? C.bg2 : 'transparent',
-                borderLeft: pathname === '/' ? `2px solid ${C.yellow}` : '2px solid transparent',
-              }}>
-                ~ 首页
-              </Link>
-            </div>
+            <Link href="/" style={{
+              display: 'block',
+              padding: '4px 12px',
+              textDecoration: 'none',
+              color: pathname === '/' ? C.fg0 : C.fg1,
+              background: pathname === '/' ? C.bg3 : 'transparent',
+              fontWeight: pathname === '/' ? 700 : 400,
+            }}>
+              ~/wiki
+            </Link>
 
-            <div style={{ borderTop: `1px solid ${C.bg2}`, margin: '0 8px 6px' }} />
+            <div style={{ borderTop: `1px solid ${C.bg2}`, margin: '6px 0' }} />
 
             {NAV.map((group) => (
-              <div key={group.label} style={{ marginBottom: 2 }}>
+              <div key={group.label} style={{ marginBottom: 12 }}>
+                {/* Section header */}
                 <div style={{
-                  padding: '4px 10px',
-                  fontSize: '0.78em',
+                  padding: '2px 12px',
                   fontWeight: 700,
-                  color: C.fg1,
-                  marginTop: 8,
+                  color: C.fg0,
                   display: 'flex',
                   alignItems: 'center',
-                  gap: 4,
+                  gap: 6,
+                  marginBottom: 2,
                 }}>
-                  <span style={{ color: C.fg2 }}>∨</span> {group.label}
+                  <span style={{ color: C.fg2, fontSize: '0.85em' }}>∨</span>
+                  {group.label}
                 </div>
-                <ul style={{ listStyle: 'none', margin: 0, padding: '0' }}>
+
+                {/* Items */}
+                <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
                   {group.items.map((item, idx, arr) => {
                     const active = isActive(item.slug);
                     const isLast = idx === arr.length - 1;
@@ -320,16 +321,21 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
                           style={{
                             display: 'flex',
                             alignItems: 'center',
-                            padding: '2px 6px 2px 0',
+                            padding: '3px 12px 3px 0',
                             textDecoration: 'none',
-                            fontSize: '0.82em',
-                            color: active ? C.yellow : C.fg1,
-                            background: active ? C.bg2 : 'transparent',
-                            borderLeft: active ? `2px solid ${C.yellow}` : '2px solid transparent',
+                            color: active ? C.fg0 : C.fg2,
+                            background: active ? C.bg3 : 'transparent',
+                            fontWeight: active ? 700 : 400,
                           }}
                         >
-                          <span style={{ color: C.fg2, paddingLeft: 8, paddingRight: 4, flexShrink: 0, fontFamily: 'monospace' }}>
-                            {isLast ? '└─' : '├─'}
+                          <span style={{
+                            color: C.bg3,
+                            paddingLeft: 16,
+                            paddingRight: 6,
+                            flexShrink: 0,
+                            userSelect: 'none',
+                          }}>
+                            {isLast ? '└' : '├'}
                           </span>
                           {item.label}
                         </Link>
