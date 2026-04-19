@@ -61,7 +61,10 @@ html, body {
 nav li {
   margin: 0 !important;
   padding: 0 !important;
-  line-height: 1 !important;
+  line-height: 1.2 !important;
+}
+nav a {
+  line-height: 1.2 !important;
 }
 
 /* ── Search dropdown ── */

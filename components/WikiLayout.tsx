@@ -279,6 +279,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             alignSelf: 'flex-start',
             maxHeight: 'calc(100vh - 44px)',
             fontSize: '13px',
+            lineHeight: '1.2',  /* override inherited 25.2px body line-height */
           }}>
             <Link href="/" style={{
               display: 'block',
