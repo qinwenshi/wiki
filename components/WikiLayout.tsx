@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import SearchBar from './SearchBar';
@@ -152,6 +152,7 @@ const NAV = [
 export default function WikiLayout({ title, articleTitle, children }: WikiLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
+  const navRef = useRef<HTMLElement>(null);
 
   // 移动端默认收起，桌面端默认展开
   useEffect(() => {
@@ -161,6 +162,15 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
     window.addEventListener('resize', handler);
     return () => window.removeEventListener('resize', handler);
   }, []);
+
+  // 侧边栏打开或路径变化时，自动滚动到当前激活的链接
+  useEffect(() => {
+    if (!sidebarOpen || !navRef.current) return;
+    const active = navRef.current.querySelector<HTMLElement>('[data-active="true"]');
+    if (active) {
+      active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+  }, [sidebarOpen, pathname]);
 
   const isActive = (slug: string) =>
     pathname === `/wiki/${encodeURIComponent(slug)}` ||
@@ -211,7 +221,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
       <div style={{ display: 'flex' }}>
         {/* ── Left Sidebar ── */}
         {sidebarOpen && (
-          <nav style={{
+          <nav ref={navRef} style={{
             width: 200,
             flexShrink: 0,
             padding: '12px 0',
@@ -265,6 +275,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
                       <li key={item.slug}>
                         <Link
                           href={`/wiki/${encodeURIComponent(item.slug)}`}
+                          data-active={active ? 'true' : undefined}
                           style={{
                             display: 'block',
                             padding: '4px 12px',
