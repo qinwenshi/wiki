@@ -63,6 +63,7 @@ const NAV = [
       { slug: '产品思维', label: '产品思维' },
       { slug: '吴军投资观', label: '吴军投资观' },
       { slug: '吴军创业观', label: '吴军创业观' },
+      { slug: '吴军产品观', label: '吴军产品观' },
     ],
   },
   {
