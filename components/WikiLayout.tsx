@@ -223,7 +223,9 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             cursor: 'pointer',
             color: C.fg2,
             fontSize: '1em',
-            padding: '2px 6px',
+            padding: '0 6px',
+            height: 28,
+            lineHeight: 'normal',
             fontFamily: 'inherit',
             flexShrink: 0,
           }}
@@ -247,11 +249,13 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
           onClick={() => setSearchOpen(true)}
           style={{
             display: 'flex', alignItems: 'center', gap: 6,
-            background: C.bg0, color: C.fg2,
-            border: `1px solid ${C.bg2}`,
-            padding: '4px 10px',
+            background: 'transparent', color: C.fg2,
+            border: `1px solid ${C.bg3}`,
+            padding: '0 10px',
+            height: 28,
             cursor: 'pointer', fontFamily: 'inherit',
             fontSize: '0.82em', whiteSpace: 'nowrap',
+            lineHeight: 'normal',
           }}
         >
           <span>🔍</span>
