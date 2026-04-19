@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import SearchBar from './SearchBar';
+import SearchModal from './SearchModal';
 import { useVimKeys } from '../hooks/useVimKeys';
 
 interface WikiLayoutProps {
@@ -152,11 +152,11 @@ const NAV = [
 
 export default function WikiLayout({ title, articleTitle, children }: WikiLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
   const navRef = useRef<HTMLElement>(null);
-  const searchRef = useRef<HTMLInputElement>(null);
 
-  useVimKeys(searchRef);
+  useVimKeys({ openSearch: () => setSearchOpen(true) });
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
@@ -193,6 +193,8 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
 
   return (
     <div style={{ minHeight: '100vh', background: C.bg0, fontFamily: 'inherit' }}>
+      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
+
       {/* ── Header (topbar) ── */}
       <header style={{
         display: 'flex',
@@ -232,9 +234,25 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
           </span>
         </Link>
 
-        <div style={{ flex: 1, minWidth: 0, maxWidth: 420 }}>
-          <SearchBar inputRef={searchRef} />
-        </div>
+        <div style={{ flex: 1 }} />
+
+        {/* Search trigger */}
+        <button
+          onClick={() => setSearchOpen(true)}
+          style={{
+            display: 'flex', alignItems: 'center', gap: 8,
+            background: C.bg0, color: C.fg2,
+            border: `1px solid ${C.bg2}`,
+            padding: '4px 12px',
+            cursor: 'pointer', fontFamily: 'inherit',
+            fontSize: '0.82em', whiteSpace: 'nowrap',
+            minWidth: 160,
+          }}
+        >
+          <span>🔍</span>
+          <span style={{ flex: 1, textAlign: 'left', color: C.fg2 }}>搜索…</span>
+          <span style={{ color: C.fg2, fontSize: '0.85em', opacity: 0.7 }}>/</span>
+        </button>
 
         <span className="article-count-badge" style={{ fontSize: '0.75em', color: C.fg2, flexShrink: 0, whiteSpace: 'nowrap' }}>
           [90]

@@ -1,7 +1,11 @@
 'use client';
-import { useEffect, useRef, RefObject } from 'react';
+import { useEffect, useRef } from 'react';
 
-export function useVimKeys(searchRef?: RefObject<HTMLInputElement | null>) {
+interface VimKeyOptions {
+  openSearch?: () => void;
+}
+
+export function useVimKeys({ openSearch }: VimKeyOptions = {}) {
   const lastKey = useRef<string>('');
   const lastKeyTime = useRef<number>(0);
 
@@ -16,10 +20,10 @@ export function useVimKeys(searchRef?: RefObject<HTMLInputElement | null>) {
         target.tagName === 'TEXTAREA' ||
         target.isContentEditable;
 
-      // '/' always focuses search, even outside input
+      // '/' opens search modal
       if (e.key === '/' && !inInput) {
         e.preventDefault();
-        searchRef?.current?.focus();
+        openSearch?.();
         return;
       }
 
@@ -65,5 +69,5 @@ export function useVimKeys(searchRef?: RefObject<HTMLInputElement | null>) {
 
     document.addEventListener('keydown', handler);
     return () => document.removeEventListener('keydown', handler);
-  }, [searchRef]);
+  }, [openSearch]);
 }
