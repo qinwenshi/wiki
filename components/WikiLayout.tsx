@@ -97,6 +97,11 @@ const NAV = [
       { slug: '历史与文明', label: '历史与文明' },
       { slug: '时事与社会', label: '时事与社会' },
       { slug: '语言与文化', label: '语言与文化' },
+      { slug: '信息熵', label: '信息熵' },
+      { slug: '最大熵原理', label: '最大熵原理' },
+      { slug: '动态规划', label: '动态规划' },
+      { slug: '布隆过滤器', label: '布隆过滤器' },
+      { slug: 'TF-IDF', label: 'TF-IDF' },
     ],
   },
   {
