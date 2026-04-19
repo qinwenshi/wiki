@@ -396,3 +396,21 @@ nav ul li::before {
   main { padding: 16px 16px !important; }
 }
 
+
+/* Homepage article cards */
+.home-card {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid var(--box-border-color);
+  color: var(--accent-blue);
+  text-decoration: none;
+  background: var(--surface-muted);
+  font-size: 0.9em;
+  line-height: 1.4;
+  transition: border-color 0.1s, background 0.1s;
+}
+.home-card:hover {
+  border-color: var(--accent-blue);
+  background: var(--surface-strong);
+  color: var(--accent-blue);
+}

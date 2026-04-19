@@ -81,25 +81,7 @@ export default function HomePage() {
                 <Link
                   key={a.slug}
                   href={`/wiki/${encodeURIComponent(a.slug)}`}
-                  style={{
-                    display: 'block',
-                    padding: '8px 12px',
-                    border: `1px solid var(--box-border-color)`,
-                    color: C.blue,
-                    textDecoration: 'none',
-                    background: C.bg1,
-                    fontSize: '0.9em',
-                    lineHeight: 1.4,
-                    transition: 'border-color 0.1s, background 0.1s',
-                  }}
-                  onMouseEnter={e => {
-                    (e.currentTarget as HTMLElement).style.borderColor = 'var(--accent-blue)';
-                    (e.currentTarget as HTMLElement).style.background = 'var(--surface-strong)';
-                  }}
-                  onMouseLeave={e => {
-                    (e.currentTarget as HTMLElement).style.borderColor = 'var(--box-border-color)';
-                    (e.currentTarget as HTMLElement).style.background = 'var(--surface-muted)';
-                  }}
+                  className="home-card"
                 >
                   {a.title}
                   {a.source && (
