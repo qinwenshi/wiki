@@ -268,7 +268,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
       </header>
 
       {/* body row — flex:1, overflow:hidden so border stays fixed */}
-      <div style={{ display: 'flex', gap: '1ch', marginTop: 20, flex: 1, overflow: 'hidden', paddingBottom: 8 }}>
+      <div style={{ display: 'flex', gap: '1ch', marginTop: 28, flex: 1, overflow: 'hidden', paddingBottom: 8, paddingLeft: 8, paddingRight: 8 }}>
         {/* ── Sidebar ── */}
         {sidebarOpen && (
           <nav ref={navRef} style={{
@@ -393,7 +393,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
               fontWeight: 700,
               color: C.orange,
               border: `1px solid ${C.orange}`,
-              padding: '1px 10px',
+              padding: '2px 14px',
               margin: 0,
               lineHeight: 1.5,
               whiteSpace: 'nowrap',
@@ -402,7 +402,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             />
           </div>
           {/* Scrollable article content — paddingTop must clear the badge height */}
-          <div ref={contentRef} style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', padding: '40px 36px 24px' }}>
+          <div ref={contentRef} style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', padding: '40px 56px 24px 40px' }}>
             {children}
           </div>
         </main>
