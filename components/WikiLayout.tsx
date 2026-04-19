@@ -379,7 +379,6 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
           background: C.bg1,
           display: 'flex',
           flexDirection: 'column',
-          overflow: 'hidden',
         }}>
           {/* Title badge on the top border — with orange border */}
           <div style={{
@@ -403,7 +402,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             />
           </div>
           {/* Scrollable article content — paddingTop must clear the badge height */}
-          <div ref={contentRef} style={{ flex: 1, overflowY: 'auto', padding: '40px 36px 24px' }}>
+          <div ref={contentRef} style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', padding: '40px 36px 24px' }}>
             {children}
           </div>
         </main>
