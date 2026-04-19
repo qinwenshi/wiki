@@ -102,6 +102,8 @@ const NAV = [
       { slug: '动态规划', label: '动态规划' },
       { slug: '布隆过滤器', label: '布隆过滤器' },
       { slug: 'TF-IDF', label: 'TF-IDF' },
+      { slug: '卷积神经网络', label: '卷积神经网络' },
+      { slug: '注意力机制与Transformer', label: '注意力机制与Transformer' },
     ],
   },
   {
@@ -133,6 +135,7 @@ const NAV = [
       { slug: '见识', label: '见识（吴军）' },
       { slug: '零售的哲学', label: '零售的哲学（铃木敏文）' },
       { slug: '数学之美', label: '数学之美（吴军）' },
+      { slug: '动手学深度学习', label: '动手学深度学习（李沐）' },
     ],
   },
   {
