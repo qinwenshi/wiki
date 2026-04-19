@@ -278,7 +278,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             top: 44,
             alignSelf: 'flex-start',
             maxHeight: 'calc(100vh - 44px)',
-            fontSize: '0.83em',
+            fontSize: '13px',
           }}>
             <Link href="/" style={{
               display: 'block',
@@ -335,13 +335,14 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
                       {group.items.map((item) => {
                         const active = isActive(item.slug);
                         return (
-                          <li key={item.slug}>
+                          <li key={item.slug} style={{ margin: 0, padding: 0, lineHeight: 1 }}>
                             <Link
                               href={`/wiki/${encodeURIComponent(item.slug)}`}
                               data-active={active ? 'true' : undefined}
                               style={{
                                 display: 'block',
-                                padding: '3px 12px',
+                                padding: '4px 12px',
+                                lineHeight: '1.4',
                                 textDecoration: 'none',
                                 color: active ? C.fg0 : C.fg2,
                                 background: active ? C.bg3 : 'transparent',

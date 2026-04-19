@@ -57,6 +57,13 @@ html, body {
   line-height: 25.2px;
 }
 
+/* ── Sidebar nav resets — override any WebTUI global li styles ── */
+nav li {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
 /* ── Search dropdown ── */
 .wiki-clone-search-dropdown {
   position: absolute;
