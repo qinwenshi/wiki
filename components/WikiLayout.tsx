@@ -198,7 +198,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
   };
 
   return (
-    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', background: C.bg0, fontFamily: 'inherit' }}>
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', background: C.bg0, fontFamily: 'inherit', paddingTop: 8 }}>
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
 
       {/* ── Header (topbar) ── */}
@@ -207,7 +207,6 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         alignItems: 'center',
         padding: '0 16px',
         border: `1px solid var(--box-border-color)`,
-        borderTop: 'none',
         background: C.bg1,
         height: 44,
         flexShrink: 0,
@@ -267,8 +266,8 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         </span>
       </header>
 
-      {/* body row — flex:1, overflow:hidden so border stays fixed */}
-      <div style={{ display: 'flex', gap: '1ch', marginTop: 28, flex: 1, overflow: 'hidden', paddingBottom: 8, paddingLeft: 8, paddingRight: 8 }}>
+      {/* body row — paddingTop (not marginTop!) so badge upper half stays inside overflow:hidden */}
+      <div style={{ display: 'flex', gap: '1ch', paddingTop: 28, flex: 1, overflow: 'hidden', paddingBottom: 8, paddingLeft: 8, paddingRight: 8 }}>
         {/* ── Sidebar ── */}
         {sidebarOpen && (
           <nav ref={navRef} style={{
