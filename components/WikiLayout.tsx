@@ -268,7 +268,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
       </header>
 
       {/* body row — flex:1, overflow:hidden so border stays fixed */}
-      <div style={{ display: 'flex', gap: '1ch', marginTop: 20, flex: 1, overflow: 'hidden' }}>
+      <div style={{ display: 'flex', gap: '1ch', marginTop: 20, flex: 1, overflow: 'hidden', paddingBottom: 8 }}>
         {/* ── Sidebar ── */}
         {sidebarOpen && (
           <nav ref={navRef} style={{
@@ -373,7 +373,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
 
         {/* ── Main ── */}
         <main style={{
-          flex: 1, minWidth: 0, maxWidth: 860,
+          flex: 1, minWidth: 0,
           border: `1px solid var(--box-border-color)`,
           position: 'relative',
           background: C.bg1,
@@ -381,20 +381,20 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
           flexDirection: 'column',
           overflow: 'hidden',
         }}>
-          {/* Title badge on the top border — no border, just text */}
+          {/* Title badge on the top border — with orange border */}
           <div style={{
             position: 'absolute',
             top: 0,
             left: 16,
             transform: 'translateY(-50%)',
             background: C.bg1,
-            paddingTop: 4,
           }}>
             <h1 style={{
               fontSize: '1.1em',
               fontWeight: 700,
               color: C.orange,
-              padding: '0 10px',
+              border: `1px solid ${C.orange}`,
+              padding: '1px 10px',
               margin: 0,
               lineHeight: 1.5,
               whiteSpace: 'nowrap',
@@ -402,8 +402,8 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
               dangerouslySetInnerHTML={{ __html: '# ' + title }}
             />
           </div>
-          {/* Scrollable article content */}
-          <div ref={contentRef} style={{ flex: 1, overflowY: 'auto', padding: '28px 36px 24px' }}>
+          {/* Scrollable article content — paddingTop must clear the badge height */}
+          <div ref={contentRef} style={{ flex: 1, overflowY: 'auto', padding: '40px 36px 24px' }}>
             {children}
           </div>
         </main>
