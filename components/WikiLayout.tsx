@@ -268,7 +268,8 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         </span>
       </header>
 
-      <div style={{ display: 'flex' }}>
+      {/* body row — gap-="1" between sidebar and article */}
+      <div style={{ display: 'flex', gap: '1ch', marginTop: 4 }}>
         {/* ── Sidebar ── */}
         {sidebarOpen && (
           <nav ref={navRef} style={{
@@ -276,14 +277,13 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             flexShrink: 0,
             padding: '8px 0 16px',
             border: `1px solid var(--box-border-color)`,
-            borderTop: 'none',
-            minHeight: 'calc(100vh - 44px)',
+            minHeight: 'calc(100vh - 48px)',
             background: C.bg1,
             overflowY: 'auto',
             position: 'sticky',
-            top: 44,
+            top: 48,
             alignSelf: 'flex-start',
-            maxHeight: 'calc(100vh - 44px)',
+            maxHeight: 'calc(100vh - 48px)',
             fontSize: '13px',
             lineHeight: '1.2',
           }}>
@@ -379,22 +379,37 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
 
         {/* ── Main ── */}
         <main style={{
-          flex: 1, padding: '24px 36px', maxWidth: 860, minWidth: 0,
+          flex: 1, minWidth: 0, maxWidth: 860,
           border: `1px solid var(--box-border-color)`,
-          borderTop: 'none', borderLeft: 'none',
+          position: 'relative',
+          paddingTop: 28,
+          background: C.bg1,
         }}>
-          <h1 style={{
-            fontSize: '1.4em',
-            fontWeight: 700,
-            color: C.orange,
-            margin: '0 0 18px',
-            paddingBottom: 10,
-            borderBottom: `1px solid ${C.bg2}`,
-            lineHeight: 1.3,
-          }}
-            dangerouslySetInnerHTML={{ __html: '# ' + title }}
-          />
-          {children}
+          {/* Title badge on the top border — like WebTUI article header */}
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 16,
+            transform: 'translateY(-50%)',
+            background: C.bg1,
+          }}>
+            <h1 style={{
+              fontSize: '1.1em',
+              fontWeight: 700,
+              color: C.orange,
+              border: `1px solid ${C.orange}`,
+              padding: '1px 10px',
+              margin: 0,
+              lineHeight: 1.5,
+              whiteSpace: 'nowrap',
+            }}
+              dangerouslySetInnerHTML={{ __html: '# ' + title }}
+            />
+          </div>
+          {/* Article content */}
+          <div style={{ padding: '16px 36px 24px' }}>
+            {children}
+          </div>
         </main>
       </div>
 
