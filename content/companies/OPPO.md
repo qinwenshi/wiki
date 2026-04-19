@@ -18,7 +18,7 @@ OPPO 最初以步步高旗下的 DVD 播放器品牌存在，2004年开始独立
 
 ## 核心技术：VOOC 闪充
 
-OPPO 在技术上最具影响力的投入是 **VOOC 闪充**（Voltage Open Loop Multi-step Constant-Current Charging）。2014年，OPPO 在 Find 7 上推出 VOOC 技术，以低电压大电流方案解决快充发热问题，充电速度大幅超越当时主流水平。
+OPPO 在技术上最具影响力的投入是 **VOOC 闪充** （Voltage Open Loop Multi-step Constant-Current Charging）。2014年，OPPO 在 Find 7 上推出 VOOC 技术，以低电压大电流方案解决快充发热问题，充电速度大幅超越当时主流水平。
 
 "充电五分钟，通话两小时"成为 OPPO 在市场上广为人知的宣传语，也是品牌最具辨识度的记忆点之一。此后 VOOC 持续迭代为 SuperVOOC，并将技术授权给 OnePlus、realme 等品牌使用。
 

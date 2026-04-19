@@ -215,7 +215,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         </div>
 
         {/* Article count badge */}
-        <span className="article-count-badge" style={{ fontSize: '0.75em', color: '#718096', flexShrink: 0, whiteSpace: 'nowrap' }}>24 篇文章</span>
+        <span className="article-count-badge" style={{ fontSize: '0.75em', color: '#718096', flexShrink: 0, whiteSpace: 'nowrap' }}>90 篇文章</span>
       </header>
 
       <div style={{ display: 'flex' }}>
@@ -327,7 +327,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         color: '#a0aec0',
         textAlign: 'center',
       }}>
-        Leon 的个人知识库 · 50 篇文章 · 8位人物 · 3家公司 · 14篇哲学思想
+        Leon 的个人知识库 · 90 篇文章 · 13位人物 · 7家公司 · 19篇哲学思想
       </footer>
     </div>
   );
