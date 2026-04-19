@@ -153,6 +153,7 @@ const NAV = [
 export default function WikiLayout({ title, articleTitle, children }: WikiLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
   const pathname = usePathname();
   const navRef = useRef<HTMLElement>(null);
 
@@ -292,59 +293,73 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
 
             <div style={{ borderTop: `1px solid ${C.bg2}`, margin: '6px 0' }} />
 
-            {NAV.map((group) => (
-              <div key={group.label} style={{ marginBottom: 12 }}>
-                {/* Section header */}
-                <div style={{
-                  padding: '2px 12px',
-                  fontWeight: 700,
-                  color: C.fg0,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 6,
-                  marginBottom: 2,
-                }}>
-                  <span style={{ color: C.fg2, fontSize: '0.85em' }}>∨</span>
-                  {group.label}
-                </div>
+            {NAV.map((group) => {
+              const isCollapsed = collapsed[group.label] ?? false;
+              return (
+                <div key={group.label} style={{ marginBottom: 12 }}>
+                  {/* Section header — clickable */}
+                  <div
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => setCollapsed(c => ({ ...c, [group.label]: !isCollapsed }))}
+                    onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && setCollapsed(c => ({ ...c, [group.label]: !isCollapsed }))}
+                    style={{
+                      padding: '2px 12px',
+                      fontWeight: 700,
+                      color: C.fg0,
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 6,
+                      marginBottom: 2,
+                      cursor: 'pointer',
+                      userSelect: 'none',
+                    }}
+                  >
+                    <span style={{
+                      color: C.fg2,
+                      fontSize: '0.85em',
+                      display: 'inline-block',
+                      transition: 'transform 0.15s',
+                      transform: isCollapsed ? 'rotate(-90deg)' : 'none',
+                    }}>∨</span>
+                    {group.label}
+                  </div>
 
-                {/* Items */}
-                <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                  {group.items.map((item, idx, arr) => {
-                    const active = isActive(item.slug);
-                    const isLast = idx === arr.length - 1;
-                    return (
-                      <li key={item.slug}>
-                        <Link
-                          href={`/wiki/${encodeURIComponent(item.slug)}`}
-                          data-active={active ? 'true' : undefined}
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            padding: '3px 12px 3px 0',
-                            textDecoration: 'none',
-                            color: active ? C.fg0 : C.fg2,
-                            background: active ? C.bg3 : 'transparent',
-                            fontWeight: active ? 700 : 400,
-                          }}
-                        >
-                          <span style={{
-                            color: C.bg3,
-                            paddingLeft: 16,
-                            paddingRight: 6,
-                            flexShrink: 0,
-                            userSelect: 'none',
-                          }}>
-                            {isLast ? '└' : '├'}
-                          </span>
-                          {item.label}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            ))}
+                  {/* Items — collapse/expand */}
+                  {!isCollapsed && (
+                    <ul style={{
+                      listStyle: 'none', margin: 0, padding: 0,
+                      borderLeft: `1px solid ${C.bg3}`,
+                      marginLeft: 20,
+                    }}>
+                      {group.items.map((item) => {
+                        const active = isActive(item.slug);
+                        return (
+                          <li key={item.slug}>
+                            <Link
+                              href={`/wiki/${encodeURIComponent(item.slug)}`}
+                              data-active={active ? 'true' : undefined}
+                              style={{
+                                display: 'block',
+                                padding: '3px 12px',
+                                textDecoration: 'none',
+                                color: active ? C.fg0 : C.fg2,
+                                background: active ? C.bg3 : 'transparent',
+                                fontWeight: active ? 700 : 400,
+                                marginLeft: -1,
+                                borderLeft: active ? `2px solid ${C.fg0}` : '2px solid transparent',
+                              }}
+                            >
+                              {item.label}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
           </nav>
         )}
 
