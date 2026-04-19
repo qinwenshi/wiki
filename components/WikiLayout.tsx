@@ -328,30 +328,36 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
 
                   {/* Items — collapse/expand */}
                   {!isCollapsed && (
-                    <ul style={{
-                      listStyle: 'none', margin: 0, padding: 0,
-                      borderLeft: `1px solid ${C.bg3}`,
-                      marginLeft: 20,
-                    }}>
-                      {group.items.map((item) => {
+                    <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+                      {group.items.map((item, idx, arr) => {
                         const active = isActive(item.slug);
+                        const isLast = idx === arr.length - 1;
                         return (
-                          <li key={item.slug} style={{ margin: 0, padding: 0, lineHeight: 1 }}>
+                          <li key={item.slug} style={{ margin: 0, padding: 0 }}>
                             <Link
                               href={`/wiki/${encodeURIComponent(item.slug)}`}
                               data-active={active ? 'true' : undefined}
                               style={{
-                                display: 'block',
-                                padding: '4px 12px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                padding: '3px 8px 3px 0',
                                 lineHeight: '1.4',
                                 textDecoration: 'none',
                                 color: active ? C.fg0 : C.fg2,
                                 background: active ? C.bg3 : 'transparent',
                                 fontWeight: active ? 700 : 400,
-                                marginLeft: -1,
-                                borderLeft: active ? `2px solid ${C.fg0}` : '2px solid transparent',
                               }}
                             >
+                              <span style={{
+                                flexShrink: 0,
+                                width: 28,
+                                textAlign: 'right',
+                                paddingRight: 6,
+                                color: active ? C.fg1 : C.bg3,
+                                userSelect: 'none',
+                              }}>
+                                {isLast ? '└' : '├'}
+                              </span>
                               {item.label}
                             </Link>
                           </li>
