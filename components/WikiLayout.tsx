@@ -269,7 +269,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
       </header>
 
       {/* body row — gap-="1" between sidebar and article */}
-      <div style={{ display: 'flex', gap: '1ch', marginTop: 4 }}>
+      <div style={{ display: 'flex', gap: '1ch', marginTop: 20 }}>
         {/* ── Sidebar ── */}
         {sidebarOpen && (
           <nav ref={navRef} style={{
@@ -277,13 +277,13 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             flexShrink: 0,
             padding: '8px 0 16px',
             border: `1px solid var(--box-border-color)`,
-            minHeight: 'calc(100vh - 48px)',
+            minHeight: 'calc(100vh - 64px)',
             background: C.bg1,
             overflowY: 'auto',
             position: 'sticky',
-            top: 48,
+            top: 64,
             alignSelf: 'flex-start',
-            maxHeight: 'calc(100vh - 48px)',
+            maxHeight: 'calc(100vh - 64px)',
             fontSize: '13px',
             lineHeight: '1.2',
           }}>
