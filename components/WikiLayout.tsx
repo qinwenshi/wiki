@@ -344,7 +344,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
                                 lineHeight: '1.4',
                                 textDecoration: 'none',
                                 color: active ? C.fg0 : C.fg2,
-                                background: active ? C.bg3 : 'transparent',
+                                background: active ? '#363a4f' : 'transparent',
                                 fontWeight: active ? 700 : 400,
                               }}
                             >
@@ -353,7 +353,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
                                 width: 28,
                                 textAlign: 'right',
                                 paddingRight: 6,
-                                color: active ? C.fg1 : C.bg3,
+                                color: active ? C.fg0 : C.bg3,
                                 userSelect: 'none',
                               }}>
                                 {isLast ? '└' : '├'}
