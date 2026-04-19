@@ -378,6 +378,28 @@ nav ul li::before {
   overflow-x: auto;
 }
 
+/* Force all SVG text in Mermaid diagrams to be light and readable */
+.mermaid svg text,
+.mermaid svg .label,
+.mermaid svg .nodeLabel,
+.mermaid svg .edgeLabel,
+.mermaid svg tspan {
+  fill: #cdd6f4 !important;
+  color: #cdd6f4 !important;
+}
+/* Timeline: section labels and event labels */
+.mermaid svg .timelineLabel,
+.mermaid svg .timeline-label,
+.mermaid svg .mermaid-timeline .label text,
+.mermaid svg g.label text {
+  fill: #cdd6f4 !important;
+}
+/* Mindmap node text */
+.mermaid svg .mindmap-node .label {
+  color: #cdd6f4 !important;
+}
+
+
 /* ── Focus-visible (WCAG 2.2 AA) ── */
 :focus-visible {
   outline: 2px solid var(--accent-sky);
