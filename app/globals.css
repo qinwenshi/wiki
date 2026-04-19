@@ -45,6 +45,10 @@
   /* WebTUI box border color */
   --box-border-color: #45475a;  /* surface-raised: subtle visible border */
 
+  /* WebTUI table border — reduce from default 2px */
+  --table-border-width: 1px;
+  --table-border-color: #45475a;
+
   /* Typography */
   --font-mono: 'JetBrains Mono', Menlo, Monaco, 'Cascadia Code', ui-monospace, monospace, 'Symbols Nerd Font';
 }
@@ -307,25 +311,23 @@ nav ul li::before {
 }
 
 .wiki-content table {
-  border-collapse: collapse;
   width: 100%;
   margin: 14px 0;
   font-size: 0.89em;
 }
 
 .wiki-content table th, .wiki-content table td {
-  border: 1px solid var(--surface-strong);
   padding: 6px 10px;
   text-align: left;
 }
 
 .wiki-content table th {
-  background: var(--surface-muted);
   color: var(--accent-yellow);
   font-weight: bold;
 }
 
-.wiki-content table tr:nth-child(even) {
+.wiki-content table tr:nth-child(even) td,
+.wiki-content table tr:nth-child(even) th {
   background: var(--surface-muted);
 }
 

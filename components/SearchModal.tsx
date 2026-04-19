@@ -128,7 +128,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
               background: C.bg1, border: `1px solid ${C.fg2}`,
               color: C.fg0, cursor: 'pointer',
               fontFamily: 'inherit', fontSize: '0.8em',
-              padding: '1px 7px', lineHeight: 1.4,
+              padding: '0 7px', height: 24, lineHeight: 'normal',
             }}
           >
             x
