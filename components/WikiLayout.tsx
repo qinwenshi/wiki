@@ -156,8 +156,9 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
   const pathname = usePathname();
   const navRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
-  useVimKeys({ openSearch: () => setSearchOpen(true) });
+  useVimKeys({ openSearch: () => setSearchOpen(true), scrollTarget: contentRef });
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
@@ -197,7 +198,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: C.bg0, fontFamily: 'inherit' }}>
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', background: C.bg0, fontFamily: 'inherit' }}>
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
 
       {/* ── Header (topbar) ── */}
@@ -209,9 +210,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         borderTop: 'none',
         background: C.bg1,
         height: 44,
-        position: 'sticky',
-        top: 0,
-        zIndex: 100,
+        flexShrink: 0,
         gap: 12,
       }}>
         <button
@@ -268,22 +267,17 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         </span>
       </header>
 
-      {/* body row — gap-="1" between sidebar and article */}
-      <div style={{ display: 'flex', gap: '1ch', marginTop: 20 }}>
+      {/* body row — flex:1, overflow:hidden so border stays fixed */}
+      <div style={{ display: 'flex', gap: '1ch', marginTop: 20, flex: 1, overflow: 'hidden' }}>
         {/* ── Sidebar ── */}
         {sidebarOpen && (
           <nav ref={navRef} style={{
             width: 220,
             flexShrink: 0,
-            padding: '8px 0 16px',
+            padding: '8px 0 16px 8px',
             border: `1px solid var(--box-border-color)`,
-            minHeight: 'calc(100vh - 64px)',
             background: C.bg1,
             overflowY: 'auto',
-            position: 'sticky',
-            top: 64,
-            alignSelf: 'flex-start',
-            maxHeight: 'calc(100vh - 64px)',
             fontSize: '13px',
             lineHeight: '1.2',
           }}>
@@ -382,23 +376,25 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
           flex: 1, minWidth: 0, maxWidth: 860,
           border: `1px solid var(--box-border-color)`,
           position: 'relative',
-          paddingTop: 28,
           background: C.bg1,
+          display: 'flex',
+          flexDirection: 'column',
+          overflow: 'hidden',
         }}>
-          {/* Title badge on the top border — like WebTUI article header */}
+          {/* Title badge on the top border — no border, just text */}
           <div style={{
             position: 'absolute',
             top: 0,
             left: 16,
             transform: 'translateY(-50%)',
             background: C.bg1,
+            paddingTop: 4,
           }}>
             <h1 style={{
               fontSize: '1.1em',
               fontWeight: 700,
               color: C.orange,
-              border: `1px solid ${C.orange}`,
-              padding: '1px 10px',
+              padding: '0 10px',
               margin: 0,
               lineHeight: 1.5,
               whiteSpace: 'nowrap',
@@ -406,8 +402,8 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
               dangerouslySetInnerHTML={{ __html: '# ' + title }}
             />
           </div>
-          {/* Article content */}
-          <div style={{ padding: '16px 36px 24px' }}>
+          {/* Scrollable article content */}
+          <div ref={contentRef} style={{ flex: 1, overflowY: 'auto', padding: '28px 36px 24px' }}>
             {children}
           </div>
         </main>
@@ -425,6 +421,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         gap: 16,
         alignItems: 'center',
         fontFamily: 'inherit',
+        flexShrink: 0,
       }}>
         <span style={{ color: C.bg0, background: C.green, fontWeight: 700, padding: '0 6px' }}>NORMAL</span>
         <span style={{ color: C.fg2 }}>~/wiki</span>
