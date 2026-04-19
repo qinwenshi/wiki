@@ -99,7 +99,8 @@ export default function SearchBar({ large = false, inputRef }: SearchBarProps) {
             placeholder="/ 搜索…"
             style={{
               width: '100%',
-              padding: large ? '8px 14px' : '4px 10px',
+              padding: large ? '0 14px' : '0 10px',
+              height: large ? 38 : 28,
               fontSize: large ? '1em' : '0.85em',
               fontFamily: 'inherit',
               background: 'var(--background0)',
@@ -119,7 +120,8 @@ export default function SearchBar({ large = false, inputRef }: SearchBarProps) {
         <button
           type="submit"
           style={{
-            padding: large ? '8px 16px' : '4px 10px',
+            padding: large ? '0 16px' : '0 10px',
+            height: large ? 38 : 28,
             background: 'var(--background2)',
             color: 'var(--foreground0)',
             border: '1px solid var(--background3)',
@@ -127,6 +129,7 @@ export default function SearchBar({ large = false, inputRef }: SearchBarProps) {
             fontSize: large ? '0.9em' : '0.8em',
             fontFamily: 'inherit',
             whiteSpace: 'nowrap',
+            lineHeight: 'normal',
           }}
         >
           搜索
