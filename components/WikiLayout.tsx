@@ -96,6 +96,7 @@ const NAV = [
       { slug: '科技与互联网', label: '科技与互联网' },
       { slug: '人工智能观察', label: '人工智能观察' },
       { slug: '历史与文明', label: '历史与文明' },
+      { slug: '全球史观与文明演化', label: '全球史观与文明演化' },
       { slug: '时事与社会', label: '时事与社会' },
       { slug: '语言与文化', label: '语言与文化' },
       { slug: '信息熵', label: '信息熵' },
@@ -137,6 +138,7 @@ const NAV = [
       { slug: '零售的哲学', label: '零售的哲学（铃木敏文）' },
       { slug: '数学之美', label: '数学之美（吴军）' },
       { slug: '动手学深度学习', label: '动手学深度学习（李沐）' },
+      { slug: '全球通史', label: '全球通史（斯塔夫里阿诺斯）' },
     ],
   },
   {
@@ -262,7 +264,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         </button>
 
         <span className="article-count-badge" style={{ fontSize: '0.75em', color: C.fg2, flexShrink: 0, whiteSpace: 'nowrap' }}>
-          [90]
+          [93]
         </span>
       </header>
 
