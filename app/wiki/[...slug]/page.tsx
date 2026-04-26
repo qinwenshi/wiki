@@ -13,9 +13,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug: slugParts } = await params;
   const slug = decodeURIComponent(slugParts.join('/'));
   const result = await getArticle(slug);
+
+  if (!result) {
+    return { title: slug };
+  }
+
+  const { article } = result;
+  const title = article.title;
+  const description = article.description || `${title} 的相关知识整理与分析。`;
+  const url = `https://wiki.tokbook.cn/wiki/${encodeURIComponent(slug)}`;
+
   return {
-    title: result ? `${result.article.title} - Leon 的个人知识库` : `${slug} - Leon 的个人知识库`,
-    description: result?.article.description || '',
+    title,
+    description,
+    keywords: article.tags,
+    openGraph: {
+      type: 'article',
+      url,
+      title,
+      description,
+      locale: 'zh_CN',
+      siteName: 'Leon 的个人知识库',
+    },
+    twitter: {
+      card: 'summary',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: url,
+    },
   };
 }
 
