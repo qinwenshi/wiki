@@ -413,6 +413,14 @@ nav ul li::before {
   .search-trigger-label { display: none; }
 }
 
+@media (max-width: 480px) {
+  .wiki-content-scroll { padding: 52px 20px 24px 20px !important; }
+}
+
+@media (max-width: 360px) {
+  .wiki-content-scroll { padding: 52px 12px 24px 12px !important; }
+}
+
 @media (max-width: 768px) {
   header { overflow: hidden; }
   main { padding: 16px 16px !important; }

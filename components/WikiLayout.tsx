@@ -405,7 +405,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
             />
           </div>
           {/* Scrollable article content — paddingTop must clear the badge height */}
-          <div ref={contentRef} style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', padding: '40px 56px 24px 40px' }}>
+          <div ref={contentRef} className="wiki-content-scroll" style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', padding: '52px 56px 24px 40px' }}>
             {children}
           </div>
         </main>
