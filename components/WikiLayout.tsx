@@ -140,6 +140,7 @@ const NAV = [
       { slug: '动手学深度学习', label: '动手学深度学习（李沐）' },
       { slug: '全球通史', label: '全球通史（斯塔夫里阿诺斯）' },
       { slug: '全球通史-章节笔记', label: '全球通史——章节笔记' },
+      { slug: '第五项修炼', label: '第五项修炼（彼得·圣吉）' },
     ],
   },
   {
@@ -265,7 +266,7 @@ export default function WikiLayout({ title, articleTitle, children }: WikiLayout
         </button>
 
         <span className="article-count-badge" style={{ fontSize: '0.75em', color: C.fg2, flexShrink: 0, whiteSpace: 'nowrap' }}>
-          [94]
+          [97]
         </span>
       </header>
 
