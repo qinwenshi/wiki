@@ -1,0 +1,1023 @@
+{
+  "步步高": [
+    "companies/OPPO",
+    "companies/OPPO",
+    "companies/OPPO",
+    "companies/vivo",
+    "companies/vivo",
+    "companies/vivo",
+    "companies/小霸王",
+    "companies/小霸王",
+    "companies/小霸王",
+    "companies/小霸王",
+    "companies/小霸王",
+    "people/段永平"
+  ],
+  "段永平": [
+    "companies/OPPO",
+    "companies/OPPO",
+    "companies/OPPO",
+    "companies/vivo",
+    "companies/vivo",
+    "companies/vivo",
+    "companies/小霸王",
+    "companies/小霸王",
+    "companies/小霸王",
+    "companies/步步高",
+    "companies/步步高",
+    "companies/步步高",
+    "people/巴菲特",
+    "people/巴菲特",
+    "people/巴菲特",
+    "people/巴菲特",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/黄峥",
+    "people/黄峥",
+    "people/黄峥",
+    "people/黄峥",
+    "people/黄峥",
+    "people/黄峥",
+    "philosophies/价值投资",
+    "philosophies/价值投资",
+    "philosophies/价值投资",
+    "philosophies/价值投资",
+    "philosophies/价值投资",
+    "philosophies/价值投资",
+    "philosophies/段永平投资哲学",
+    "philosophies/段永平投资哲学",
+    "reading/穷查理宝典"
+  ],
+  "vivo": [
+    "companies/OPPO",
+    "companies/OPPO",
+    "companies/OPPO",
+    "companies/步步高",
+    "companies/步步高",
+    "companies/步步高",
+    "companies/步步高",
+    "people/段永平"
+  ],
+  "OPPO": [
+    "companies/vivo",
+    "companies/vivo",
+    "companies/vivo",
+    "companies/vivo",
+    "companies/步步高",
+    "companies/步步高",
+    "companies/步步高",
+    "companies/步步高",
+    "people/段永平"
+  ],
+  "杰夫·贝佐斯": [
+    "companies/亚马逊",
+    "reading/一网打尽"
+  ],
+  "一网打尽": [
+    "companies/亚马逊",
+    "people/杰夫·贝佐斯"
+  ],
+  "张一鸣": [
+    "companies/字节跳动",
+    "companies/字节跳动",
+    "eras/2016-2020成熟期",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "people/张小龙",
+    "people/张小龙",
+    "people/张小龙",
+    "people/王兴",
+    "philosophies/产品与算法思维",
+    "philosophies/产品与算法思维",
+    "philosophies/产品与算法思维"
+  ],
+  "产品与算法思维": [
+    "companies/字节跳动",
+    "companies/字节跳动",
+    "companies/字节跳动",
+    "people/张一鸣",
+    "people/张一鸣",
+    "people/张小龙",
+    "philosophies/微信产品哲学",
+    "philosophies/微信产品哲学"
+  ],
+  "段永平投资哲学": [
+    "companies/步步高",
+    "companies/步步高",
+    "companies/步步高",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/段永平",
+    "people/段永平",
+    "philosophies/价值投资",
+    "philosophies/价值投资",
+    "philosophies/价值投资",
+    "philosophies/吴军投资观",
+    "reading/穷查理宝典",
+    "reading/穷查理宝典",
+    "reading/穷查理宝典",
+    "reading/穷查理宝典"
+  ],
+  "小霸王": [
+    "companies/步步高",
+    "companies/步步高",
+    "companies/步步高",
+    "people/段永平"
+  ],
+  "王兴": [
+    "companies/美团",
+    "companies/美团",
+    "companies/美团",
+    "companies/美团",
+    "eras/2007-2010早期探索",
+    "eras/2011-2015美团崛起",
+    "eras/2016-2020成熟期",
+    "knowledge/人工智能观察",
+    "knowledge/人工智能观察",
+    "knowledge/人工智能观察",
+    "knowledge/历史与文明",
+    "knowledge/时事与社会",
+    "knowledge/科技与互联网",
+    "knowledge/经济与投资",
+    "knowledge/语言与文化",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "life/其他观察",
+    "life/生活与饮食",
+    "patterns/历史类比思维",
+    "patterns/历史类比思维",
+    "patterns/历史类比思维",
+    "people/俞军",
+    "people/俞军",
+    "people/张一鸣",
+    "people/张一鸣",
+    "people/张一鸣",
+    "people/张一鸣",
+    "people/张小龙",
+    "people/张小龙",
+    "people/张小龙",
+    "people/张小龙",
+    "people/段永平",
+    "people/王慧文",
+    "people/王慧文",
+    "people/王慧文",
+    "people/王慧文",
+    "people/王慧文",
+    "philosophies/产品与算法思维",
+    "philosophies/产品与算法思维",
+    "philosophies/产品与算法思维",
+    "philosophies/产品思维",
+    "philosophies/供需关系与产品设计",
+    "philosophies/供需关系与产品设计",
+    "philosophies/俞军产品方法论",
+    "philosophies/俞军产品方法论",
+    "philosophies/创业与商业",
+    "philosophies/创业与商业",
+    "philosophies/哲学与认知",
+    "philosophies/哲学与认知",
+    "philosophies/微信产品哲学",
+    "philosophies/微信产品哲学",
+    "philosophies/段永平投资哲学",
+    "philosophies/王慧文产品课",
+    "philosophies/王慧文产品课",
+    "projects/海内",
+    "projects/海内",
+    "reading/阅读与书单"
+  ],
+  "王慧文": [
+    "companies/美团",
+    "companies/美团",
+    "companies/美团",
+    "knowledge/饭否文化与社区",
+    "people/王兴",
+    "philosophies/供需关系与产品设计",
+    "philosophies/供需关系与产品设计",
+    "philosophies/供需关系与产品设计",
+    "philosophies/供需关系与产品设计",
+    "philosophies/王慧文产品课",
+    "philosophies/王慧文产品课",
+    "philosophies/王慧文产品课",
+    "techniques/产品分层框架",
+    "techniques/产品分层框架",
+    "techniques/产品分层框架"
+  ],
+  "创业与商业": [
+    "companies/美团",
+    "companies/美团",
+    "companies/美团",
+    "eras/2011-2015美团崛起",
+    "eras/2016-2020成熟期",
+    "knowledge/科技与互联网",
+    "knowledge/经济与投资",
+    "knowledge/财务报表基础",
+    "patterns/历史类比思维",
+    "patterns/历史类比思维",
+    "people/张一鸣",
+    "people/王兴",
+    "philosophies/产品思维",
+    "philosophies/吴军创业观",
+    "philosophies/战略思维",
+    "reading/好战略坏战略",
+    "reading/必然",
+    "reading/必然",
+    "reading/零售的哲学",
+    "techniques/财务报表分析框架"
+  ],
+  "供需关系与产品设计": [
+    "companies/美团",
+    "companies/美团",
+    "people/王慧文",
+    "people/王慧文",
+    "philosophies/王慧文产品课",
+    "philosophies/王慧文产品课",
+    "philosophies/王慧文产品课",
+    "reading/创新者的窘境",
+    "reading/创新者的窘境",
+    "reading/创新者的窘境",
+    "techniques/产品分层框架",
+    "techniques/产品分层框架"
+  ],
+  "饭否文化与社区": [
+    "companies/美团",
+    "people/张一鸣",
+    "people/张小龙",
+    "people/张小龙",
+    "people/王兴",
+    "people/王兴",
+    "philosophies/产品与算法思维",
+    "philosophies/微信产品哲学",
+    "philosophies/微信产品哲学",
+    "projects/海内",
+    "projects/海内",
+    "projects/海内"
+  ],
+  "安迪·格鲁夫": [
+    "companies/英特尔",
+    "companies/英特尔",
+    "companies/英特尔",
+    "companies/英特尔",
+    "reading/富甲美国",
+    "reading/格鲁夫给经理人的第一课",
+    "reading/格鲁夫给经理人的第一课",
+    "reading/格鲁夫给经理人的第一课",
+    "reading/见识",
+    "reading/赢",
+    "reading/赢",
+    "techniques/OKR",
+    "techniques/OKR",
+    "techniques/高产出管理",
+    "techniques/高产出管理"
+  ],
+  "OKR": [
+    "companies/英特尔",
+    "companies/英特尔",
+    "companies/英特尔",
+    "people/安迪·格鲁夫",
+    "philosophies/产品与算法思维",
+    "reading/格鲁夫给经理人的第一课",
+    "reading/格鲁夫给经理人的第一课",
+    "reading/赢",
+    "reading/赢",
+    "techniques/拒绝伪工作",
+    "techniques/高产出管理",
+    "techniques/高产出管理"
+  ],
+  "格鲁夫给经理人的第一课": [
+    "companies/英特尔",
+    "companies/英特尔",
+    "companies/英特尔",
+    "companies/英特尔",
+    "people/安迪·格鲁夫",
+    "people/安迪·格鲁夫",
+    "philosophies/战略思维",
+    "philosophies/战略思维",
+    "philosophies/战略思维",
+    "reading/好战略坏战略",
+    "reading/好战略坏战略",
+    "reading/好战略坏战略",
+    "reading/赢",
+    "reading/赢",
+    "techniques/OKR",
+    "techniques/OKR",
+    "techniques/吴军职场方法论",
+    "techniques/高产出管理",
+    "techniques/高产出管理"
+  ],
+  "2011-2015美团崛起": [
+    "eras/2007-2010早期探索",
+    "eras/2016-2020成熟期",
+    "knowledge/时事与社会",
+    "people/王兴",
+    "philosophies/创业与商业"
+  ],
+  "产品思维": [
+    "eras/2007-2010早期探索",
+    "knowledge/科技与互联网",
+    "people/俞军",
+    "people/俞军",
+    "people/王兴",
+    "philosophies/俞军产品方法论",
+    "philosophies/俞军产品方法论",
+    "philosophies/创业与商业",
+    "philosophies/用户价值模型",
+    "philosophies/用户价值模型"
+  ],
+  "科技与互联网": [
+    "eras/2007-2010早期探索",
+    "knowledge/人工智能观察",
+    "knowledge/人工智能观察",
+    "knowledge/历史与文明",
+    "philosophies/产品思维",
+    "philosophies/吴军创业观",
+    "reading/必然",
+    "reading/必然"
+  ],
+  "海内": [
+    "eras/2007-2010早期探索",
+    "eras/2007-2010早期探索",
+    "people/王兴"
+  ],
+  "2007-2010早期探索": [
+    "eras/2011-2015美团崛起",
+    "people/王兴",
+    "philosophies/创业与商业",
+    "projects/海内",
+    "projects/海内"
+  ],
+  "2016-2020成熟期": [
+    "eras/2011-2015美团崛起",
+    "knowledge/时事与社会",
+    "people/王兴",
+    "philosophies/创业与商业"
+  ],
+  "哲学与认知": [
+    "eras/2016-2020成熟期",
+    "knowledge/人工智能观察",
+    "knowledge/人工智能观察",
+    "knowledge/历史与文明",
+    "patterns/历史类比思维",
+    "patterns/历史类比思维",
+    "people/王兴",
+    "people/维特根斯坦",
+    "people/维特根斯坦",
+    "philosophies/维特根斯坦哲学",
+    "philosophies/维特根斯坦哲学",
+    "reading/阅读与书单"
+  ],
+  "经济与投资": [
+    "eras/2016-2020成熟期",
+    "knowledge/时事与社会",
+    "knowledge/科技与互联网",
+    "philosophies/创业与商业",
+    "philosophies/哲学与认知"
+  ],
+  "时事与社会": [
+    "eras/2016-2020成熟期",
+    "knowledge/经济与投资",
+    "life/其他观察"
+  ],
+  "字节跳动": [
+    "eras/2016-2020成熟期",
+    "people/张一鸣",
+    "philosophies/产品与算法思维",
+    "techniques/OKR",
+    "techniques/OKR",
+    "techniques/OKR"
+  ],
+  "信息熵": [
+    "knowledge/TF-IDF",
+    "knowledge/动态规划",
+    "knowledge/布隆过滤器",
+    "knowledge/最大熵原理",
+    "reading/动手学深度学习"
+  ],
+  "统计语言模型": [
+    "knowledge/TF-IDF",
+    "knowledge/信息熵",
+    "knowledge/动态规划",
+    "knowledge/最大熵原理"
+  ],
+  "数学之美": [
+    "knowledge/TF-IDF",
+    "knowledge/信息熵",
+    "knowledge/动态规划",
+    "knowledge/布隆过滤器",
+    "knowledge/最大熵原理"
+  ],
+  "历史类比思维": [
+    "knowledge/人工智能观察",
+    "knowledge/人工智能观察",
+    "people/王兴"
+  ],
+  "必然": [
+    "knowledge/人工智能观察",
+    "knowledge/人工智能观察",
+    "knowledge/人工智能观察",
+    "knowledge/科技与互联网",
+    "knowledge/科技与互联网",
+    "philosophies/费曼学习法",
+    "philosophies/费曼学习法",
+    "reading/全球通史",
+    "reading/全球通史",
+    "reading/奇点临近",
+    "reading/奇点临近",
+    "reading/奇点临近",
+    "reading/学会提问",
+    "reading/学会提问",
+    "reading/学会提问"
+  ],
+  "学会提问": [
+    "knowledge/人工智能观察",
+    "knowledge/人工智能观察",
+    "knowledge/科技与互联网",
+    "knowledge/科技与互联网",
+    "people/理查德·费曼",
+    "people/理查德·费曼",
+    "people/理查德·费曼",
+    "people/理查德·费曼",
+    "people/理查德·费曼",
+    "philosophies/费曼学习法",
+    "philosophies/费曼学习法",
+    "philosophies/逻辑思维框架",
+    "reading/好战略坏战略",
+    "reading/好战略坏战略",
+    "reading/必然",
+    "reading/必然",
+    "reading/格鲁夫给经理人的第一课"
+  ],
+  "最大熵原理": [
+    "knowledge/信息熵"
+  ],
+  "全球通史": [
+    "knowledge/全球史观与文明演化",
+    "knowledge/全球史观与文明演化",
+    "reading/全球通史-章节笔记",
+    "reading/燃烧的远征"
+  ],
+  "历史与文明": [
+    "knowledge/全球史观与文明演化",
+    "knowledge/全球史观与文明演化",
+    "knowledge/时事与社会",
+    "knowledge/经济与投资",
+    "knowledge/语言与文化",
+    "patterns/历史类比思维",
+    "patterns/历史类比思维",
+    "philosophies/哲学与认知",
+    "reading/全球通史-章节笔记",
+    "reading/全球通史",
+    "reading/全球通史",
+    "reading/全球通史",
+    "reading/全球通史",
+    "reading/阅读与书单"
+  ],
+  "文明兴衰规律": [
+    "knowledge/全球史观与文明演化",
+    "knowledge/全球史观与文明演化"
+  ],
+  "动手学深度学习": [
+    "knowledge/卷积神经网络",
+    "knowledge/注意力机制与Transformer"
+  ],
+  "注意力机制与Transformer": [
+    "knowledge/卷积神经网络",
+    "reading/动手学深度学习"
+  ],
+  "TF-IDF": [
+    "knowledge/卷积神经网络",
+    "knowledge/注意力机制与Transformer"
+  ],
+  "语言与文化": [
+    "knowledge/历史与文明"
+  ],
+  "动态规划": [
+    "knowledge/布隆过滤器"
+  ],
+  "协同过滤算法": [
+    "knowledge/推荐系统概论",
+    "knowledge/推荐系统概论",
+    "philosophies/供需关系与产品设计",
+    "philosophies/供需关系与产品设计",
+    "techniques/推荐系统工程实践",
+    "techniques/推荐系统工程实践",
+    "techniques/评分预测与模型融合",
+    "techniques/评分预测与模型融合",
+    "techniques/评分预测与模型融合"
+  ],
+  "推荐系统工程实践": [
+    "knowledge/推荐系统概论",
+    "knowledge/推荐系统概论",
+    "techniques/协同过滤算法",
+    "techniques/协同过滤算法",
+    "techniques/评分预测与模型融合",
+    "techniques/评分预测与模型融合"
+  ],
+  "评分预测与模型融合": [
+    "knowledge/推荐系统概论",
+    "knowledge/推荐系统概论",
+    "techniques/协同过滤算法",
+    "techniques/协同过滤算法",
+    "techniques/推荐系统工程实践"
+  ],
+  "卷积神经网络": [
+    "knowledge/注意力机制与Transformer",
+    "reading/动手学深度学习"
+  ],
+  "人工智能观察": [
+    "knowledge/科技与互联网",
+    "people/王兴",
+    "reading/必然",
+    "reading/必然"
+  ],
+  "阅读与书单": [
+    "knowledge/语言与文化",
+    "philosophies/哲学与认知"
+  ],
+  "财务报表分析框架": [
+    "knowledge/财务报表基础"
+  ],
+  "价值投资": [
+    "knowledge/财务报表基础",
+    "people/巴菲特",
+    "people/巴菲特",
+    "people/巴菲特",
+    "people/巴菲特",
+    "people/巴菲特",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/段永平",
+    "people/黄峥",
+    "people/黄峥",
+    "people/黄峥",
+    "people/黄峥",
+    "philosophies/吴军投资观",
+    "philosophies/段永平投资哲学",
+    "reading/好战略坏战略",
+    "reading/好战略坏战略",
+    "reading/穷查理宝典",
+    "reading/穷查理宝典",
+    "reading/穷查理宝典",
+    "reading/见识",
+    "techniques/财务报表分析框架"
+  ],
+  "张小龙": [
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "philosophies/微信产品哲学",
+    "philosophies/微信产品哲学",
+    "philosophies/微信产品哲学"
+  ],
+  "微信产品哲学": [
+    "knowledge/饭否文化与社区",
+    "knowledge/饭否文化与社区",
+    "people/张小龙",
+    "people/张小龙",
+    "people/张小龙",
+    "philosophies/产品与算法思维",
+    "philosophies/产品与算法思维",
+    "philosophies/产品与算法思维",
+    "philosophies/产品思维",
+    "philosophies/产品思维",
+    "philosophies/吴军产品观"
+  ],
+  "生活与饮食": [
+    "life/其他观察"
+  ],
+  "其他观察": [
+    "life/生活与饮食"
+  ],
+  "俞军产品方法论": [
+    "people/俞军",
+    "people/俞军",
+    "people/俞军",
+    "people/俞军",
+    "philosophies/产品思维",
+    "philosophies/产品思维",
+    "philosophies/吴军产品观",
+    "philosophies/吴军产品观",
+    "philosophies/用户价值模型",
+    "philosophies/用户价值模型",
+    "reading/赢",
+    "reading/赢",
+    "reading/零售的哲学"
+  ],
+  "用户价值模型": [
+    "people/俞军",
+    "people/俞军",
+    "philosophies/产品思维",
+    "philosophies/产品思维",
+    "philosophies/俞军产品方法论",
+    "philosophies/俞军产品方法论",
+    "techniques/产品分层框架",
+    "techniques/产品分层框架"
+  ],
+  "高产出管理": [
+    "people/安迪·格鲁夫",
+    "people/安迪·格鲁夫",
+    "people/安迪·格鲁夫",
+    "people/段永平",
+    "philosophies/战略思维",
+    "reading/AI驱动的领导力",
+    "reading/富甲美国",
+    "reading/格鲁夫给经理人的第一课",
+    "reading/格鲁夫给经理人的第一课",
+    "reading/见识",
+    "reading/赢",
+    "reading/赢",
+    "reading/零售的哲学",
+    "techniques/20-70-10人才梯队管理",
+    "techniques/20-70-10人才梯队管理",
+    "techniques/4E1P招聘框架",
+    "techniques/AI思维伙伴框架",
+    "techniques/OKR",
+    "techniques/OKR",
+    "techniques/OKR",
+    "techniques/吴军职场方法论",
+    "techniques/拒绝伪工作",
+    "techniques/沃尔玛经营哲学"
+  ],
+  "英特尔": [
+    "people/安迪·格鲁夫",
+    "philosophies/战略思维",
+    "techniques/OKR"
+  ],
+  "穷查理宝典": [
+    "people/巴菲特",
+    "people/巴菲特",
+    "people/巴菲特",
+    "people/巴菲特",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "philosophies/价值投资",
+    "philosophies/价值投资"
+  ],
+  "本杰明·格雷厄姆": [
+    "people/巴菲特"
+  ],
+  "巴菲特": [
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/本杰明·格雷厄姆",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/查理·芒格",
+    "people/段永平",
+    "people/黄峥",
+    "people/黄峥",
+    "philosophies/价值投资",
+    "philosophies/价值投资",
+    "philosophies/价值投资",
+    "philosophies/价值投资",
+    "philosophies/价值投资",
+    "reading/穷查理宝典",
+    "reading/穷查理宝典",
+    "reading/穷查理宝典",
+    "reading/穷查理宝典"
+  ],
+  "黄峥": [
+    "people/本杰明·格雷厄姆",
+    "people/段永平"
+  ],
+  "亚马逊": [
+    "people/杰夫·贝佐斯",
+    "reading/一网打尽"
+  ],
+  "美团": [
+    "people/王兴",
+    "people/王慧文",
+    "people/王慧文",
+    "philosophies/供需关系与产品设计",
+    "philosophies/创业与商业"
+  ],
+  "王慧文产品课": [
+    "people/王慧文",
+    "people/王慧文",
+    "philosophies/供需关系与产品设计",
+    "philosophies/供需关系与产品设计",
+    "reading/创新者的窘境",
+    "reading/创新者的窘境",
+    "reading/创新者的窘境",
+    "techniques/产品分层框架",
+    "techniques/产品分层框架"
+  ],
+  "俞军": [
+    "people/王慧文",
+    "people/王慧文",
+    "philosophies/俞军产品方法论",
+    "philosophies/俞军产品方法论",
+    "philosophies/俞军产品方法论",
+    "philosophies/王慧文产品课",
+    "philosophies/王慧文产品课",
+    "philosophies/用户价值模型",
+    "philosophies/用户价值模型",
+    "philosophies/用户价值模型"
+  ],
+  "费曼学习法": [
+    "people/理查德·费曼",
+    "people/理查德·费曼",
+    "people/理查德·费曼",
+    "people/理查德·费曼",
+    "philosophies/逻辑思维框架",
+    "philosophies/逻辑思维框架",
+    "reading/github精选项目",
+    "reading/学会提问",
+    "reading/学会提问",
+    "reading/学会提问",
+    "reading/必然",
+    "reading/必然",
+    "techniques/分析阅读方法",
+    "techniques/高产出管理",
+    "techniques/高产出管理"
+  ],
+  "维特根斯坦哲学": [
+    "people/维特根斯坦",
+    "people/维特根斯坦"
+  ],
+  "逻辑思维框架": [
+    "people/维特根斯坦",
+    "people/维特根斯坦",
+    "philosophies/维特根斯坦哲学",
+    "philosophies/维特根斯坦哲学",
+    "philosophies/费曼学习法",
+    "philosophies/费曼学习法",
+    "philosophies/金字塔原理",
+    "reading/学会提问",
+    "reading/学会提问",
+    "reading/学会提问",
+    "reading/穷查理宝典",
+    "techniques/写作结构技术",
+    "techniques/分析阅读方法"
+  ],
+  "富甲美国": [
+    "people/萨姆·沃尔顿",
+    "reading/一网打尽",
+    "techniques/沃尔玛经营哲学"
+  ],
+  "推荐系统概论": [
+    "philosophies/供需关系与产品设计",
+    "philosophies/供需关系与产品设计",
+    "philosophies/俞军产品方法论",
+    "philosophies/王慧文产品课",
+    "philosophies/王慧文产品课",
+    "philosophies/用户价值模型",
+    "philosophies/用户价值模型",
+    "techniques/协同过滤算法",
+    "techniques/推荐系统工程实践",
+    "techniques/评分预测与模型融合",
+    "techniques/评分预测与模型融合"
+  ],
+  "智人之上": [
+    "philosophies/信息联结论",
+    "philosophies/信息联结论",
+    "reading/AI驱动的领导力",
+    "reading/娱乐至死",
+    "techniques/信息网络政治学",
+    "techniques/信息网络政治学"
+  ],
+  "信息网络政治学": [
+    "philosophies/信息联结论",
+    "philosophies/媒介即认识论"
+  ],
+  "奇点临近": [
+    "philosophies/信息联结论",
+    "reading/数学之美",
+    "reading/数学之美",
+    "reading/智人之上"
+  ],
+  "见识": [
+    "philosophies/吴军产品观",
+    "philosophies/吴军产品观",
+    "philosophies/吴军创业观",
+    "philosophies/吴军创业观",
+    "philosophies/吴军投资观",
+    "philosophies/吴军投资观",
+    "reading/数学之美",
+    "reading/数学之美",
+    "reading/数学之美",
+    "techniques/吴军沟通方法论",
+    "techniques/吴军沟通方法论",
+    "techniques/吴军职场方法论",
+    "techniques/拒绝伪工作",
+    "techniques/拒绝伪工作"
+  ],
+  "吴军创业观": [
+    "philosophies/吴军产品观"
+  ],
+  "吴军职场方法论": [
+    "philosophies/吴军创业观",
+    "philosophies/吴军投资观",
+    "techniques/吴军沟通方法论",
+    "techniques/拒绝伪工作"
+  ],
+  "娱乐至死": [
+    "philosophies/媒介即认识论",
+    "philosophies/媒介即认识论",
+    "reading/燃烧的远征"
+  ],
+  "信息联结论": [
+    "philosophies/媒介即认识论",
+    "reading/娱乐至死",
+    "techniques/信息网络政治学"
+  ],
+  "分析阅读方法": [
+    "philosophies/媒介即认识论"
+  ],
+  "第五项修炼": [
+    "philosophies/学习型组织",
+    "reading/智人之上",
+    "techniques/AI思维伙伴框架",
+    "techniques/系统思考"
+  ],
+  "系统思考": [
+    "philosophies/学习型组织",
+    "philosophies/学习型组织",
+    "reading/第五项修炼",
+    "techniques/信息网络政治学"
+  ],
+  "自我超越": [
+    "philosophies/学习型组织",
+    "reading/第五项修炼",
+    "techniques/系统思考"
+  ],
+  "团队学习": [
+    "philosophies/学习型组织",
+    "reading/第五项修炼"
+  ],
+  "共同愿景": [
+    "philosophies/学习型组织",
+    "reading/第五项修炼"
+  ],
+  "好战略坏战略": [
+    "philosophies/战略思维",
+    "philosophies/战略思维",
+    "reading/创新者的窘境",
+    "reading/创新者的窘境",
+    "reading/创新者的窘境",
+    "reading/学会提问",
+    "reading/学会提问",
+    "reading/学会提问",
+    "reading/格鲁夫给经理人的第一课",
+    "reading/格鲁夫给经理人的第一课",
+    "reading/赢",
+    "reading/赢"
+  ],
+  "赢": [
+    "philosophies/战略思维",
+    "philosophies/战略思维",
+    "philosophies/战略思维",
+    "reading/好战略坏战略",
+    "reading/好战略坏战略",
+    "reading/格鲁夫给经理人的第一课",
+    "reading/格鲁夫给经理人的第一课",
+    "techniques/20-70-10人才梯队管理",
+    "techniques/20-70-10人才梯队管理",
+    "techniques/4E1P招聘框架",
+    "techniques/4E1P招聘框架"
+  ],
+  "金字塔原理": [
+    "philosophies/段永平投资哲学",
+    "philosophies/段永平投资哲学",
+    "philosophies/王慧文产品课",
+    "philosophies/王慧文产品课",
+    "philosophies/用户价值模型",
+    "philosophies/费曼学习法",
+    "philosophies/费曼学习法",
+    "philosophies/逻辑思维框架",
+    "reading/学会提问",
+    "reading/学会提问",
+    "techniques/写作结构技术",
+    "techniques/分析阅读方法",
+    "techniques/高产出管理",
+    "techniques/高产出管理"
+  ],
+  "创新者的窘境": [
+    "philosophies/王慧文产品课",
+    "reading/全球通史",
+    "reading/全球通史",
+    "reading/全球通史",
+    "reading/奇点临近",
+    "reading/奇点临近",
+    "reading/奇点临近",
+    "techniques/产品分层框架"
+  ],
+  "维特根斯坦": [
+    "philosophies/维特根斯坦哲学",
+    "philosophies/维特根斯坦哲学",
+    "philosophies/维特根斯坦哲学"
+  ],
+  "理查德·费曼": [
+    "philosophies/费曼学习法",
+    "philosophies/费曼学习法",
+    "philosophies/费曼学习法"
+  ],
+  "写作结构技术": [
+    "philosophies/逻辑思维框架",
+    "philosophies/金字塔原理",
+    "techniques/吴军沟通方法论"
+  ],
+  "全球史观与文明演化": [
+    "reading/全球通史-章节笔记",
+    "reading/全球通史"
+  ],
+  "产品分层框架": [
+    "reading/创新者的窘境",
+    "reading/创新者的窘境",
+    "reading/创新者的窘境",
+    "reading/创新者的窘境"
+  ],
+  "媒介即认识论": [
+    "reading/娱乐至死"
+  ],
+  "沃尔玛": [
+    "reading/富甲美国"
+  ],
+  "零售业竞争哲学": [
+    "reading/富甲美国"
+  ],
+  "凯文·凯利": [
+    "reading/必然"
+  ],
+  "吴军产品观": [
+    "reading/数学之美"
+  ],
+  "查理·芒格": [
+    "reading/穷查理宝典"
+  ],
+  "学习型组织": [
+    "reading/第五项修炼",
+    "techniques/系统思考"
+  ],
+  "五项修炼": [
+    "reading/第五项修炼"
+  ],
+  "心智模式": [
+    "reading/第五项修炼"
+  ],
+  "奇点临近（库兹韦尔）": [
+    "reading/见识",
+    "reading/见识",
+    "reading/见识"
+  ],
+  "20-70-10人才梯队管理": [
+    "reading/赢",
+    "techniques/4E1P招聘框架",
+    "techniques/4E1P招聘框架"
+  ],
+  "4E1P招聘框架": [
+    "reading/赢",
+    "techniques/20-70-10人才梯队管理"
+  ],
+  "AI驱动的领导力": [
+    "techniques/AI思维伙伴框架"
+  ],
+  "战略思维": [
+    "techniques/信息网络政治学",
+    "techniques/财务报表分析框架"
+  ],
+  "AI思维伙伴框架": [
+    "techniques/沃尔玛经营哲学"
+  ],
+  "增长极限": [
+    "techniques/系统思考"
+  ],
+  "转移负担": [
+    "techniques/系统思考"
+  ],
+  "财务报表基础": [
+    "techniques/财务报表分析框架"
+  ]
+}
