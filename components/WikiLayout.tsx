@@ -23,6 +23,7 @@ const NAV = [
       { slug: 'vivo', label: 'vivo' },
       { slug: '小霸王', label: '小霸王' },
       { slug: '英特尔', label: '英特尔' },
+      { slug: '亚马逊', label: '亚马逊' },
     ],
   },
   {
@@ -42,6 +43,7 @@ const NAV = [
       { slug: '本杰明·格雷厄姆', label: '本杰明·格雷厄姆' },
       { slug: '理查德·费曼', label: '理查德·费曼' },
       { slug: '萨姆·沃尔顿', label: '萨姆·沃尔顿' },
+      { slug: '杰夫·贝佐斯', label: '杰夫·贝佐斯' },
     ],
   },
   {
@@ -152,6 +154,7 @@ const NAV = [
       { slug: 'AI驱动的领导力', label: 'AI驱动的领导力（伍兹）' },
       { slug: '富甲美国', label: '富甲美国（沃尔顿）' },
       { slug: '燃烧的远征', label: '燃烧的远征（布朗沃思）' },
+      { slug: '一网打尽', label: '一网打尽（布拉德·斯通）' },
     ],
   },
   {
