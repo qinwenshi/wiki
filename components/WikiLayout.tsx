@@ -96,6 +96,8 @@ const NAV = [
       { slug: '沃尔玛经营哲学', label: '沃尔玛经营哲学' },
       { slug: '系统思考', label: '系统思考（彼得·圣吉）' },
       { slug: '学习科学方法论', label: '学习科学方法论' },
+      { slug: 'Cordis插件架构', label: 'Cordis 插件架构' },
+      { slug: 'Agent能力体系', label: 'Agent 能力体系' },
     ],
   },
   {
@@ -119,6 +121,7 @@ const NAV = [
       { slug: 'TF-IDF', label: 'TF-IDF' },
       { slug: '卷积神经网络', label: '卷积神经网络' },
       { slug: '注意力机制与Transformer', label: '注意力机制与Transformer' },
+      { slug: '依赖注入与控制反转', label: '依赖注入与控制反转' },
     ],
   },
   {
